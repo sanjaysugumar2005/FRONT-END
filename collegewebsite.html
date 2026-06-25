@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMJC College Website</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background-color:#f5f5f5;
+        }
+
+        /* Header */
+
+        .header-box{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:20px 60px;
+            background-color:white;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo{
+            width:180px;
+        }
+
+        .link a{
+            text-decoration:none;
+            color:navy;
+            margin:0 15px;
+            font-weight:bold;
+        }
+
+        .link a:hover{
+            color:orange;
+        }
+
+        .phone{
+            color:navy;
+            font-weight:bold;
+        }
+
+        /* Hero Section */
+
+        .main-box{
+            min-height:550px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:60px;
+
+            background-image:url("https://www.amjaincollege.edu.in/wp-content/uploads/2023/12/green-3.jpg");
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+        }
+
+        .left-box{
+            width:60%;
+            background-color:rgba(18,56,161,0.85);
+            padding:60px;
+            border-radius:15px;
+            color:white;
+        }
+
+        .left-box h1{
+            font-size:60px;
+            color:yellow;
+            margin-bottom:20px;
+        }
+
+        .left-box h2{
+            font-size:40px;
+            margin-bottom:20px;
+        }
+
+        .left-box p{
+            font-size:18px;
+            line-height:1.8;
+        }
+
+        .right-box{
+            width:350px;
+            background-color:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .right-box h2{
+            text-align:center;
+            color:navy;
+            margin-bottom:20px;
+        }
+
+        .right-box input{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        .right-box button{
+            width:100%;
+            padding:12px;
+            margin-top:10px;
+            border:none;
+            border-radius:5px;
+            background-color:navy;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        .right-box button:hover{
+            background-color:orange;
+        }
+
+        /* Steps */
+
+        .greybox{
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+            background:black;
+            color:yellow;
+            padding:30px;
+            text-align:center;
+            font-weight:bold;
+        }
+
+        /* Statistics */
+
+        .yellowbox{
+            display:flex;
+            justify-content:space-around;
+            background:yellow;
+            padding:30px;
+        }
+
+        .yellowbox span{
+            text-align:center;
+            font-size:18px;
+            font-weight:bold;
+        }
+
+        .yellowbox strong{
+            font-size:32px;
+            display:block;
+            margin-bottom:10px;
+        }
+
+        /* About Section */
+
+        .row{
+            display:flex;
+            align-items:center;
+            gap:50px;
+            padding:60px;
+            background:white;
+        }
+
+        .text-section{
+            width:50%;
+        }
+
+        .text-section h2{
+            color:navy;
+            margin-bottom:15px;
+        }
+
+        .text-section h3{
+            margin-bottom:20px;
+        }
+
+        .text-section p{
+            line-height:1.8;
+            margin-bottom:20px;
+        }
+
+        .text-section h4{
+            margin-bottom:10px;
+        }
+
+        .image-section{
+            width:50%;
+        }
+
+        .image-section img{
+            width:100%;
+            border-radius:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <div class="header-box">
+
+        <img class="logo"
+        src="https://static.npfs.co/accounts/7072/documents/2026/5/7/1716995e329844e4a8def7da359a6c70_amjc-logo-c.webp?1778141259"
+        alt="AMJC Logo">
+
+        <div class="link">
+            <a href="#">How To Apply</a>
+            <a href="#">About</a>
+            <a href="#">AMJC</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <h4 class="phone">Ph: 23434-34355</h4>
+
+    </div>
+
+    <!-- Hero Section -->
+
+    <div class="main-box">
+
+        <div class="left-box">
+            <h1>Welcome To AMJC</h1>
+
+            <h2>Admissions Open 2026</h2>
+
+            <p>
+                Rooted in legacy and rising from the heart of Chennai,
+                Agurchand Manmull Jain College offers world-class education,
+                excellent placements and vibrant campus life.
+            </p>
+        </div>
+
+        <div class="right-box">
+
+            <h2>Student Login</h2>
+
+            <input type="text" placeholder="Enter Name">
+
+            <input type="email" placeholder="Enter Email Address">
+
+            <input type="tel" placeholder="Enter Mobile Number">
+
+            <button>Apply Now</button>
+
+        </div>
+
+    </div>
+
+    <!-- Steps -->
+
+    <div class="greybox">
+        <span>1. Register</span>
+        <span>2. Verify Email</span>
+        <span>3. Fill Application</span>
+        <span>4. Upload Documents</span>
+        <span>5. Pay Fee</span>
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="yellowbox">
+
+        <span>
+            <strong>100+</strong>
+            Recruiters
+        </span>
+
+        <span>
+            <strong>40K+</strong>
+            Alumni
+        </span>
+
+        <span>
+            <strong>7,500+</strong>
+            Students
+        </span>
+
+        <span>
+            <strong>350+</strong>
+            Faculty
+        </span>
+
+        <span>
+            <strong>40+</strong>
+            Courses
+        </span>
+
+    </div>
+
+    <!-- About -->
+
+    <div class="row">
+
+        <div class="text-section">
+
+            <h2>Admissions Open 2026–2027 | NAAC A+ Grade</h2>
+
+            <h3>Rooted in Legacy. Rising from the Heart of Chennai</h3>
+
+            <p>
+                With over 70+ years of academic excellence and a network
+                of 50,000+ accomplished alumni, AMJC provides a career-focused
+                campus designed to turn potential into real-world success.
+            </p>
+
+            <h4>✔ NAAC Re-accredited with Grade A+</h4>
+            <h4>✔ Commerce, Science and Arts Programmes</h4>
+            <h4>✔ Top Industry Placements</h4>
+            <h4>✔ Safe and Inclusive Campus</h4>
+            <h4>✔ Clubs and Leadership Opportunities</h4>
+
+        </div>
+
+        <div class="image-section">
+
+            <img src="https://static.npfs.co/accounts/7072/documents/2026/5/7/df1db6ef7cdc4236b0a993af0aa61d5c_amjc-college-pic%20(1).webp?1778142636"
+            alt="AMJC Campus">
+
+        </div>
+
+    </div>
+
+</body>
+</html>
