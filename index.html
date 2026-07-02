@@ -4,94 +4,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanjay</title>
+    <title>SanjayPortfolio</title>
 
     <style>
-        body {
-            padding: 0;
+        * {
             margin: 0;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .background {
+            background-color: #0f0f0f;
+            width: 100%;
+            height: 350vh;
+        }
+
+        .info {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
 
         }
 
-        h1 {
-            background-color: black;
-            color: aliceblue;
-             text-align: center;
-            /* border: 1px solid blue; */
-            margin: 0;
-            
-
+        .info h3 {
+            color: white;
+            margin-bottom: 20px;
         }
 
-        nav {
-            background-color: black;
-            text-align: center;
-            padding-bottom: 1;
-            
-
-           
-        }
-        a{
-            margin: 10px;
-            color: aliceblue;
+        .info a {
+            color: rgb(255, 255, 255);
             text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
 
         }
 
-        section{
-            border: solid black;
+        .info a:hover {
+            color: #fffc00;
+        }
+
+        .box {
+            background-color: #f1f1f1;
+            height: 400px;
+            width: 800px;
             margin: auto;
-            width: 60%;
-            margin-top: 50px;
-            padding-left: 20px;
+            margin-top: 30px;
+            margin-bottom: 100px;
             border-radius: 20px;
-            background-color: blueviolet;
-            color: aliceblue;
-            margin-bottom: 30px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 40px gray;
         }
-        footer{
-            background-color: black;
-            color: aliceblue;
+
+
+        .box img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+            object-fit: cover;
+
+
+            box-shadow: 0px 4px 10px gray;
+        }
+
+
+        .box h2 {
+            margin-top: 10px;
             text-align: center;
+        }
+        .box p{
+            margin-top: 20px;
+        }
+
+        .resumebox {
+            background-color: #f1f1f1;
+            height: 200px;
+            width: 800px;
+            margin: auto;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 40px gray;
+            margin-bottom: 100px;
+        }
+
+        .Resume h2 {
+            color: white;
+            width: 750px;
+            margin: 50px auto 20px auto;
+        }
+
+        .resume-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #fffc00;
+            color: rgb(10, 10, 10);
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .resume-btn:hover {
+            background-color: #fffc00;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .Education h2 {
+            color: white;
+            width: 750px;
+            margin: 50px auto 20px auto;
+        }
+        
+        .education-box {
+            background-color: #f1f1f1;
+            height: 250px;
+            width: 800px;
+            margin: auto;
+            border-radius: 20px;
             padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 40px gray;
+            margin-bottom: 100px;
 
         }
+        .school{
+            width: 100%;
+            padding: 20px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        .school h3{
+            margin-bottom: 8px;
+        }
+
+        .school p{
+            margin-bottom: 10px;
+        }
+
+        .Project h2{
+            color: white;
+            width: 750px;
+            margin: 50px auto 20px auto;
+
+        }
+
+        .project-box{
+             background-color: #f1f1f1;
+            height: 250px;
+            width: 800px;
+            margin: auto;
+            border-radius: 20px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 40px gray;
+            margin-bottom: 100px;
+
+        }
+
+        .project-btn{
+               display: inline-block;
+            padding: 12px 25px;
+            background-color: #fffc00;
+            color: #0f0f0f;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin: 40px;
+        }
+        .project-btn2{
+               display: inline-block;
+            padding: 12px 25px;
+            background-color: #fffc00;
+            color: #0f0f0f;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+          
+        .project-btn:hover {
+            background-color: #fffc00
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+          .project-btn2:hover {
+            background-color: #fffc00;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+            .Contact h2{
+                width: 750px;
+            margin: 50px auto 20px auto;
+            color: white;
+
+            }
+            .contact-box{
+             background-color: #f1f1f1;
+            height: 250px;
+            width: 800px;
+            margin: auto;
+            border-radius: 20px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 40px gray;
+            margin-bottom: 100px;
+            }
+            .gmail-btn{
+                    display: inline-block;
+            padding: 12px 25px;
+            background-color: #fffc00;
+            color: #0f0f0f;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            }
+      
+            .gmail-btn:hover{
+                 background-color: #fffc00;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
     </style>
 
 </head>
 
 <body>
-    <header>
-        <h1>SANJAY</h1>
-    </header>
-   
-    <nav>
-        <a href="">About</a>
-        <a href="">education</a>
-        <a href="">skills</a>
-    </nav>
 
-    <section>
-   <h2> about </h2>
-   <p> hi am sanjay </p>
-    </section>
-        <section>
-    <h2> education </h2>
-   <p> BCA </p>
-        </section>
+    <div class="background">
 
-    <section>
-        <h2> skills </h2>
-        <p> Python,Html,CSS </p>
+        <div class="info">
 
-    </section>
-    <footer>
-        <p>
-            @SANJAYSUGUMAR2005@GMAIL.COM 
-        </p>
-    </footer>
+            <a href="#Home">Home</a>
+            <a href="#Resume">Resume</a>
+            <a href="#Education">Education</a>
+            <a href="#Project">Project</a>
+            <a href="#Contact">Contact</a>
+        </div>
 
+        <div>
+            <div class="box" id="Home">
+                <img src="sanjay/sanjayimg.jpg" alt="">
+                <h2>Sanjay</h2>
+                <p>Python Full Stack Developer</p>
+
+            </div>
+        </div>
+        <div>
+            <div class="Resume" id="Resume">
+                <h2> Resume</h2>
+            </div>
+            <div class="resumebox">
+                <a href="resume.html" class="resume-btn"> View Resume </a>
+            </div>
+        </div>
+
+
+        <div class="Education" id="Education">
+            <h2>Education</h2>
+        </div>
+        <div class="education-box">
+           
+            
+         <div class="school">   
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p>A.M. Jain College, Chennai</p>
+            <p>Graduated: 2026</p>
+
+            <h3>Higher Secondary Certificate (HSC)</h3>
+            <p>Krishnaswamy School</p>
+            <p>Completed: 2023</p>
+      
+        </div>
+        </div>
+        <div class="Project" id="Project">
+            <h2>Project</h2>
+
+        </div>  
+        <div class="project-box">
+           <div>
+            <a href="https://github.com/sanjaysugumar2005/PAIYALGAM-PYTHON" class="project-btn">python Project</a>
+           <a href="https://github.com/sanjaysugumar2005/FRONT-END" class="project-btn2"> Html Css Project</a>
+        </div> 
+
+        </div>
+  
+    <div class="Contact" id="Contact">
+        <h2> Contact </h2>
+    </div>
+
+    <div class="contact-box">
+
+        <div class="gmail-icon">
+    <!-- <img src="https://cdn-icons-gif.flaticon.com/6416/6416396.gif" -->
+         <!-- width="64" height="64"> -->
+
+    <a href="mailto:sanjaysugumar2005@gmail.com" class="gmail-btn">
+        sanjaysugumar2005@gmail.com
+    </a>
+</div>
+
+
+        
+    </div>
+
+  </div>
 </body>
 
 </html>
-
