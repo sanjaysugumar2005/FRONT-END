@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sanjay Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Resume</title>
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
 <style>
+    /* ==========================
+   GOOGLE FONT
+========================== */
+
 *{
     margin:0;
     padding:0;
@@ -13,191 +23,432 @@
 }
 
 body{
-    background:#e9ecef;
-    font-family:'Segoe UI',sans-serif;
+    background:#ececec;
+    font-family:'Poppins',sans-serif;
+    color:#222;
     padding:30px;
+}
+
+/* ==========================
+   RESUME
+========================== */
+
+.resume{
+    width:210mm;
+    min-height:297mm;
+    margin:auto;
+    background:#fff;
+    padding:25px 35px;
+    box-shadow:0 8px 30px rgba(0,0,0,.12);
+}
+
+/* ==========================
+   HEADER
+========================== */
+header{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    border-bottom:3px solid #000;
+    padding-bottom:8px;
+    margin-bottom:10px;
+}
+
+header h1{
+    font-size:34px;
+}
+
+header h2{
+    margin-top:4px;
+    font-size:18px;
+    font-weight:500;
+    color:#555;
+}
+.contact,
+.links{
+    font-size:14px;
+}
+
+.contact a{
+    color:#000000;
+    text-decoration:none;
+    font-weight:500;
+}
+.links a{
+    color:#090de9;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.contact span,
+.links span{
+    margin:0 8px;
+    color:#777777;
+}
+
+.contact a:hover,
+.links a:hover{
+    text-decoration:underline;
+}
+
+/* ==========================
+   SECTIONS
+========================== */
+
+
+section{
+    margin-top:16px;
+}
+
+
+section h3{
+    font-size:17px;
+    margin-bottom:8px;
+}
+
+
+section p{
+    font-size:13px;
+    line-height:1.5;
+}
+
+.skill-line{
+    font-size:14px;
+    line-height:1.8;
+    margin-bottom:6px;
+}
+
+.skill-line strong{
+    font-weight:600;
+    color:#000;
+}
+
+
+/* ==========================
+   PROJECTS
+========================== */
+
+.project{
+    margin-bottom:6px;
+}
+
+.project h4{
+    font-size:15px;
+    margin-bottom:3px;
+}
+
+.project p{
+    font-size:13px;
+    margin-bottom:4px;
+}
+
+.project ul{
+    margin-left:18px;
+}
+
+.project a{
+    color:blue
+}
+
+.project li{
+    font-size:12px;
+    line-height:1.25;
+    margin-bottom:1px;
+}
+
+
+/* ==========================
+   EDUCATION
+========================== */
+
+
+.education-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.edu-box h4{
+    font-size:15px;
+    margin-bottom:6px;
+    color:#000;
+}
+
+.edu-box p{
+    font-size:13px;
+    margin-bottom:3px;
+    line-height:1.4;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    margin-top:20px;
+}
+
+/* ==========================
+   PRINT
+========================== */
+@page{
+    size:A4;
+    margin:12mm;
+}
+@media print{
+
+body{
+    background:white;
+    padding:0;
 }
 
 .resume{
-    width:900px;
-    margin:auto;
-    display:flex;
-    background:#fff;
-    box-shadow:0 10px 30px rgba(32, 31, 31, 0.2);
+    width:100%;
+    min-height:auto;
+    background:white;
+    box-shadow:none;
+    margin:0;
+    padding:0;
 }
 
-.left{
-    width:30%;
-    background:black;
-    color:white;
-    padding:30px;
+a{
+    color:#000;
+    text-decoration:none;
 }
 
-.left h2{
-    border-bottom:2px solid black;
-    margin-bottom:10px;
-    padding-bottom:5px;
 }
 
-.left ul{
-    margin-left:18px;
-    line-height:1.8;
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:900px){
+
+.resume{
+    width:100%;
+    padding:25px;
+}
+header{
+    padding-bottom:12px;
+    margin-bottom:14px;
 }
 
-.right{
-    width:70%;
-    padding:35px;
+header h1{
+    font-size:30px;
 }
 
-.name{
-    font-size:40px;
-    font-weight:bold;
-    color:black;
+header h2{
+    font-size:16px;
+
+}
+.education-grid{
+    grid-template-columns:1fr;
+    gap:15px;
+}
 }
 
-.role{
-    color:black;
-    font-size:18px;
-    margin-bottom:20px;
-}
-
-.section{
-    margin-top:25px;
-}
-
-.section h2{
-    color:#0f172a;
-    border-bottom:2px solid black
-    padding-bottom:5px;
-    margin-bottom:10px;
-}
-
-p{
-    line-height:1.7;
-}
-
-ul{
-    margin-left:20px;
-    line-height:1.8;
-}
-
-.contact{
-    line-height:1.8;
-    font-size:14px;
-}
 </style>
-</head>
 
 <body>
 
 <div class="resume">
 
-    <div class="left">
+    <!-- HEADER -->
+     <header>
 
-        <h2>Contact</h2>
-        <div class="contact">
-            📞 +91 7339476299<br>
-            📍 Chennai, Tamil Nadu
-        </div>
+    <h1>SANJAY S</h1>
 
-        <br>
+    <h2>Python Developer</h2>
 
-        <h2>Skills</h2>
+    <div class="contact">
+
+        <a href="tel:+917339476299">+91 7339476299</a>
+
+        <span>|</span>
+
+        <a href="mailto:sanjaysugumar2005@gmail.com">
+            sanjaysugumar2005@gmail.com
+        </a>
+
+        <span>|</span>
+
+        <span>Chennai, Tamil Nadu</span>
+
+    </div>
+
+    <div class="links">
+
+        <a href="https://sanjaysugumar-portfolio.netlify.app/" target="_blank">
+            Portfolio
+        </a>
+
+        <span>|</span>
+
+        <a href="https://github.com/sanjaysugumar2005" target="_blank">
+            GitHub
+        </a>
+
+        <span>|</span>
+
+        <a href="https://linkedin.com/in/sanjay-sugumar-9209933b8" target="_blank">
+            LinkedIn
+        </a>
+
+    </div>
+
+</header>
+
+
+    <!-- SUMMARY -->
+
+    <section>
+
+        <h3>Professional Summary</h3>
+
+        <p>
+            Motivated Python Developer pursuing a Bachelor of Computer Applications (BCA)
+            with strong knowledge of Python, HTML and CSS. Passionate about software
+            development and problem solving with hands-on experience building personal
+            projects and continuously improving technical skills through GitHub. Currently
+            learning SQL, Flask, NumPy and Pandas while seeking a Python Developer
+            Internship or Entry-Level Software Developer role.
+        </p>
+
+    </section>
+
+    <!-- SKILLS -->
+
+<section>
+
+    <h3>Technical Skills</h3>
+
+    <p class="skill-line">
+        <strong>Programming:</strong> Python, HTML5, CSS3
+    </p>
+
+    <p class="skill-line">
+        <strong>Core Python:</strong>  Data Types, Operators, Loops, Functions, Lists, Tuples
+    </p>
+
+    <p class="skill-line">
+        <strong>Web:</strong>  Flexbox, CSS Grid
+    </p>
+<p class="skill-line">
+    <strong>Tools:</strong> Git, GitHub, Visual Studio Code
+</p>
+    
+
+</section>
+
+       
+
+
+        <!-- PROJECTS -->
+
+<section>
+
+    <h3>Projects</h3>
+
+
+
+    <div class="project">
+
+        <h4>Personal Portfolio Website</h4>
+
+        <p><strong>GitHub:</strong>
+<a href=https://github.com/sanjaysugumar2005/FRONT-END target="_blank">
+View Project
+</a>
+</p>
         <ul>
-            <li>Python</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Git & GitHub</li>
-            <li>Problem Solving</li>
-        </ul>
 
-        <br>
+            <li>Developed a professional portfolio website to showcase technical skills, projects and contact details.</li>
 
-        <h2>Languages</h2>
-        <ul>
-            <li>English</li>
-            <li>Tamil</li>
-        </ul>
+            <li>Integrated clickable Portfolio, GitHub and LinkedIn links for recruiters.</li>
 
-        <br>
+            <li>Designed a clean and responsive interface using semantic HTML and CSS.</li>
 
-        <h2>Strengths</h2>
-        <ul>
-            <li>Quick Learner</li>
-            <li>Hardworking</li>
-            <li>Self Motivated</li>
-            <li>Team Player</li>
+            <li>Optimized the layout for improved accessibility and user experience.</li>
+
         </ul>
 
     </div>
 
-    <div class="right">
+    <div class="project">
 
-        <div class="name">SANJAY S</div>
-        <div class="role">Aspiring Python Developer</div>
+        <h4>Python Programming Projects</h4>
 
-        <div class="section">
-            <h2>Professional Summary</h2>
-            <p>
-                Aspiring Python Developer with a strong interest in software development,
-                web technologies, and data science. Built personal projects using HTML
-                and CSS and continuously improving programming and problem-solving skills.
-                Passionate about learning new technologies and building real-world applications.
-            </p>
+        <p><strong>GitHub:</strong>
+<a href=https://github.com/sanjaysugumar2005/PAIYALGAM-PYTHON target="_blank">
+View Project
+</a>
+</p>
+
+        <ul>
+
+            <li>Developed Python applications including Prime Number Checker, Fibonacci Generator, Palindrome Checker, Factorial Calculator and Pattern Printing.</li>
+
+            <li>Applied variables, data types, operators, loops, conditional statements and functions to solve programming problems.</li>
+
+            <li>Strengthened logical thinking and problem-solving through hands-on coding practice.</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+        
+<!-- EDUCATION -->
+
+<section>
+
+    <h3>Education</h3>
+
+    <div class="education-grid">
+
+        <div class="edu-box">
+
+            <h4>Bachelor of Computer Applications (BCA)</h4>
+
+            <p>A.M. Jain College, Chennai</p>
+
+            <p>Expected Graduation: May 2026</p>
+            
+
         </div>
 
-        <div class="section">
-            <h2>Projects</h2>
+        <div class="edu-box">
 
-            <h3>Personal Portfolio Website</h3>
-            <ul>
-                <li>Developed a responsive portfolio website using HTML and CSS.</li>
-                <li>Showcased profile, skills, and projects.</li>
-                <li>Designed a clean and user-friendly interface.</li>
-            </ul>
+            <h4>Higher Secondary Certificate (HSC)</h4>
 
-            <br>
+            <p>Krishnaswamy School</p>
 
-            <h3>Basic Python Programs</h3>
-            <ul>
-                <li>Created programs using loops, functions, and operators.</li>
-                <li>Built mini projects for calculations and logic building.</li>
-                <li>Practiced problem-solving using Python.</li>
-            </ul>
-        </div>
+            <p>Completed: March 2023</p>
 
-        <div class="section">
-            <h2>Education</h2>
-
-            <p>
-                <strong>Bachelor of Computer Applications (BCA)</strong><br>
-                A.M. Jain College, Chennai<br>
-                Expected Graduation: 2026
-            </p>
-
-            <br>
-
-            <p>
-                <strong>Higher Secondary Certificate (HSC)</strong><br>
-                Krishnaswamy School<br>
-                Completed: 2023
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Links</h2>
-            <p>
-                
-                Portfolio:<span style="color: #004cff;"> sanjay-sugumar-portfolio-qu2.caffeine.xyz</span><br>
-                GitHub: <span style="color:#004cff;">github.com/sanjaysugumar2005</span><br>
-                Email: <span style="color: #004cff;">sanjaysugumar2005@gmail.com</span><br>
-                LinkedIn: <span style="color: #004cff;">linkedin.com/in/sanjay-sugumar-9209 </span> 
-            </p>
         </div>
 
     </div>
+
+</section>
+
+
+    <!-- FOOTER -->
+
+    <section>
+
+        <h3>Strengths</h3>
+
+        <p>
+            Problem Solving, Quick Learner, Team Collaboration, Adaptability, Self-Motivated
+        </p>
+
+    </section>
 
 </div>
 
 </body>
+
 </html>

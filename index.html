@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SanjayPortfolio</title>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,18 +18,40 @@
             scroll-behavior: smooth;
         }
 
-        .background {
-            background-color: #0f0f0f;
+            body{
+        font-family: 'Poppins', sans-serif;
+    }
+
+    h2{
+    font-family: 'Montserrat', sans-serif;
+}
+            h3{
+    font-family: 'Montserrat', sans-serif;
+}
+p{
+    font-family: 'Poppins', sans-serif;
+}
+      
+                    .background{
+            background-color: #212121;
             width: 100%;
-            height: 350vh;
-        }
+            min-height: 100vh;
+            padding-bottom: 40px;
+}
+        
 
         .info {
             padding: 20px;
             display: flex;
             justify-content: space-between;
+            justify-content: center;
+gap: 50px;
             flex-direction: row;
-
+            position: sticky;
+top: 0;
+z-index: 1000;
+background: rgba(33, 33, 33, 0.8); /* 80% opacity */
+backdrop-filter: blur(8px); /* Optional glass effect */
         }
 
         .info h3 {
@@ -42,17 +65,21 @@
             display: block;
             margin-bottom: 10px;
             font-size: 18px;
+            font-family: 'Poppins', sans-serif;
 
         }
 
-        .info a:hover {
-            color: #fffc00;
-        }
+        
+
+        .info a:hover{
+    color:white;
+    border-bottom:2px solid white;
+    transition:0.3s;
+}
 
         .box {
-            background-color: #f1f1f1;
-            height: 400px;
-            width: 800px;
+            background-color: #212121;
+            min-height: 400px;
             margin: auto;
             margin-top: 30px;
             margin-bottom: 100px;
@@ -62,9 +89,23 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            box-shadow: 0px 4px 40px gray;
+            box-shadow: 0px 4px 40px #000000;
+            width: 90%;
+            max-width: 800px;
+
+            transition: 0.3s ease;
+cursor: pointer;
         }
 
+
+.box:hover,
+.resumebox:hover,
+.education-box:hover,
+.project-box:hover,
+.contact-box:hover{
+    transform:translateY(-10px) scale(1.02);
+    box-shadow:0 10px 40px rgba(255,255,255,.15);
+}
 
         .box img {
             width: 150px;
@@ -75,22 +116,59 @@
             object-fit: cover;
 
 
-            box-shadow: 0px 4px 10px gray;
+            box-shadow: 0px 4px 10px #000000;
+
         }
 
 
         .box h2 {
             margin-top: 10px;
             text-align: center;
+            color: white
         }
         .box p{
             margin-top: 20px;
+            color:white
         }
 
+        .typing{
+    font-size: 22px;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid white;
+    width: 0;
+    animation: typing 8s steps(27, end) infinite,
+               blink 0.8s step-end infinite;
+}
+
+@keyframes typing{
+    0%{
+        width: 0;
+    }
+    40%{
+        width: 27ch;
+    }
+    60%{
+        width: 27ch;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
+}
+
         .resumebox {
-            background-color: #f1f1f1;
-            height: 200px;
-            width: 800px;
+            background-color: #212121;
+            min-height: 200px;
+             width: 90%;
+            max-width: 800px;
+        
             margin: auto;
             border-radius: 20px;
             padding: 20px;
@@ -98,20 +176,26 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            box-shadow: 0px 4px 40px gray;
+            box-shadow: 0px 4px 40px #000000;
             margin-bottom: 100px;
+
+            transition: 0.3s ease;
+cursor: pointer;
         }
+
+
 
         .Resume h2 {
             color: white;
-            width: 750px;
+          width: 90%;
+max-width: 750px;
             margin: 50px auto 20px auto;
         }
 
         .resume-btn {
             display: inline-block;
             padding: 12px 25px;
-            background-color: #fffc00;
+            background-color: #919297;
             color: rgb(10, 10, 10);
             text-decoration: none;
             border-radius: 30px;
@@ -121,21 +205,41 @@
         }
 
         .resume-btn:hover {
-            background-color: #fffc00;
+            background-color: #C1C2C7;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
+        .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+
+color:white
+}
+
+.skills span {
+    padding: 6px 12px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
         .Education h2 {
             color: white;
-            width: 750px;
+            width: 90%;
+max-width: 750px;
             margin: 50px auto 20px auto;
         }
         
         .education-box {
-            background-color: #f1f1f1;
-            height: 250px;
-            width: 800px;
+            background-color: #212121;
+            min-height: 250px;
+           
+             width: 90%;
+            max-width: 800px;
             margin: auto;
             border-radius: 20px;
             padding: 10px;
@@ -143,15 +247,18 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            box-shadow: 0px 4px 40px gray;
+            box-shadow: 0px 4px 40px #000000;
             margin-bottom: 100px;
 
+            transition: 0.3s ease;
+cursor: pointer;
         }
         .school{
             width: 100%;
             padding: 20px;
             text-align: left;
             box-sizing: border-box;
+            color:white
         }
 
         .school h3{
@@ -164,15 +271,18 @@
 
         .Project h2{
             color: white;
-            width: 750px;
+           ;
+            width: 90%;
+max-width: 750px;
             margin: 50px auto 20px auto;
 
         }
 
         .project-box{
-             background-color: #f1f1f1;
-            height: 250px;
-            width: 800px;
+             background-color: #212121;
+            min-height: 250px;
+            width: 90%;
+            max-width: 800px;
             margin: auto;
             border-radius: 20px;
             padding: 10px;
@@ -180,15 +290,18 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            box-shadow: 0px 4px 40px gray;
+            box-shadow: 0px 4px 40px #000000;
             margin-bottom: 100px;
+
+            transition: 0.3s ease;
+cursor: pointer;
 
         }
 
         .project-btn{
                display: inline-block;
             padding: 12px 25px;
-            background-color: #fffc00;
+            background-color: #919297;
             color: #0f0f0f;
             text-decoration: none;
             border-radius: 30px;
@@ -200,7 +313,7 @@
         .project-btn2{
                display: inline-block;
             padding: 12px 25px;
-            background-color: #fffc00;
+            background-color: #919297;
             color: #0f0f0f;
             text-decoration: none;
             border-radius: 30px;
@@ -210,26 +323,29 @@
         }
           
         .project-btn:hover {
-            background-color: #fffc00
+            background-color: #C1C2C7;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
           .project-btn2:hover {
-            background-color: #fffc00;
+            background-color: #C1C2C7;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
             .Contact h2{
-                width: 750px;
+               
+                width: 90%;
+max-width: 750px;
             margin: 50px auto 20px auto;
             color: white;
 
             }
             .contact-box{
-             background-color: #f1f1f1;
-            height: 250px;
-            width: 800px;
+             background-color: #212121;
+            min-height: 250px;
+            width: 90%;
+            max-width: 800px;
             margin: auto;
             border-radius: 20px;
             padding: 10px;
@@ -237,26 +353,180 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            box-shadow: 0px 4px 40px gray;
+            box-shadow: 0px 4px 40px #000000;
             margin-bottom: 100px;
+
+            transition: 0.3s ease;
+cursor: pointer;
             }
             .gmail-btn{
                     display: inline-block;
-            padding: 12px 25px;
-            background-color: #fffc00;
+            padding: 12px 28px;
+            background-color: #919297;
             color: #0f0f0f;
             text-decoration: none;
             border-radius: 30px;
-            font-size: 18px;
+            font-size: 15px;
             font-weight: bold;
-            transition: 0.3s;
+            transition: 0.3s;       
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    word-break: break-word;
             }
       
             .gmail-btn:hover{
-                 background-color: #fffc00;
+                 background-color: #C1C2C7;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             }
+.linkedin-btn{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #919297;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.linkedin-btn:hover{
+    background:#C1C2C7;
+    transform:translateY(-3px);
+}
+
+.github-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#919297;
+    color:#000;
+    text-decoration:none;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.github-btn:hover{
+    background:#C1C2C7;
+    transform:translateY(-3px);
+}
+            .resume-btn,
+.project-btn,
+.project-btn2,
+.gmail-btn{
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 768px){
+
+    /* Navigation */
+    .info{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+
+    }
+
+    .info a{
+        font-size: 18px;
+    }
+
+    /* All boxes */
+    .box,
+    .resumebox,
+    .education-box,
+    .project-box,
+    .contact-box{
+        width: 95%;
+        margin-bottom: 50px;
+        padding: 20px;
+    }
+
+
+
+    /* Profile image */
+    .box img{
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Home section */
+    .box h2{
+        font-size: 30px;
+    }
+
+    .box p{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* Section headings */
+    .Resume h2,
+    .Education h2,
+    .Project h2,
+    .Contact h2{
+        width: 95%;
+        margin: 30px auto 20px;
+        font-size: 28px;
+    }
+
+    /* Education text */
+    .school{
+        padding: 10px;
+    }
+
+    .school h3{
+        font-size: 20px;
+    }
+
+    .school p{
+        font-size: 16px;
+    }
+
+    /* Project buttons */
+    .project-box div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .project-btn,
+    .project-btn2{
+        width: 220px;
+        margin: 0;
+        text-align: center;
+    }
+
+    /* Resume button */
+    .resume-btn{
+        width: 220px;
+        text-align: center;
+    }
+
+    /* Gmail button */
+    .gmail-btn{
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+        word-break: break-word;
+    }
+}
+
+footer{
+    text-align:center;
+    color:white;
+    padding:25px;
+    font-size:16px;
+}
+
     </style>
 
 </head>
@@ -278,7 +548,7 @@
             <div class="box" id="Home">
                 <img src="sanjay/sanjayimg.jpg" alt="">
                 <h2>Sanjay</h2>
-                <p>Python Full Stack Developer</p>
+                <p class="typing">Python Full Stack Developer</p>
 
             </div>
         </div>
@@ -288,7 +558,19 @@
             </div>
             <div class="resumebox">
                 <a href="resume.html" class="resume-btn"> View Resume </a>
-            </div>
+            
+
+
+<div class="skills">
+    <span>Python</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <!-- <span>Git</span> -->
+    <span>GitHub</span>
+    <!-- <span>MySQL</span> -->
+</div>
+</div>
         </div>
 
 
@@ -328,12 +610,19 @@
     <div class="contact-box">
 
         <div class="gmail-icon">
-    <!-- <img src="https://cdn-icons-gif.flaticon.com/6416/6416396.gif" -->
-         <!-- width="64" height="64"> -->
 
-    <a href="mailto:sanjaysugumar2005@gmail.com" class="gmail-btn">
-        sanjaysugumar2005@gmail.com
+    <a href="mailto:sanjaysugumar2005@gmail.com" class="gmail-btn"> sanjaysugumar2005@gmail.com
     </a>
+<br><br>
+
+<a href="https://github.com/sanjaysugumar2005" target="_blank" class="github-btn">
+    GitHub Profile
+</a>
+    <br><br>
+
+<a href="https://www.linkedin.com/in/sanjay-sugumar/" target="_blank" class="linkedin-btn">
+    LinkedIn Profile
+</a>
 </div>
 
 
@@ -341,6 +630,10 @@
     </div>
 
   </div>
+
+  <footer>
+    <p>© 2026 Sanjay Sugumar | Built with HTML & CSS</p>
+</footer>
 </body>
 
 </html>
