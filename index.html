@@ -359,32 +359,23 @@ max-width: 750px;
             transition: 0.3s ease;
 cursor: pointer;
             }
-            .gmail-btn{
-                    display: inline-block;
-            padding: 12px 28px;
-            background-color: #919297;
-            color: #0f0f0f;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 15px;
-            font-weight: bold;
-            transition: 0.3s;       
-    width: 100%;
-    max-width: 320px;
-    text-align: center;
-    word-break: break-word;
-            }
-      
-            .gmail-btn:hover{
-                 background-color: #C1C2C7;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            }
+
+            .button-group{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.github-btn,
+.gmail-btn,
 .linkedin-btn{
     display: inline-block;
-    margin-top: 20px;
     padding: 12px 25px;
-    background-color: #919297;
+    min-width: 180px;
+    text-align: center;
+    background: #919297;
     color: #000;
     text-decoration: none;
     border-radius: 30px;
@@ -393,34 +384,28 @@ cursor: pointer;
     transition: 0.3s;
 }
 
+.github-btn:hover,
+.gmail-btn:hover,
 .linkedin-btn:hover{
-    background:#C1C2C7;
-    transform:translateY(-3px);
+    background: #fff;
+    transform: translateY(-3px);
 }
+           
+   
 
-.github-btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#919297;
-    color:#000;
-    text-decoration:none;
-    border-radius:30px;
-    font-size:18px;
-    font-weight:bold;
-    transition:0.3s;
+
+footer{
+    text-align:center;
+    color:grey;
+    padding:25px;
+    font-size:16px;
+    background-color: #212121;
 }
-
 .github-btn:hover{
     background:#C1C2C7;
     transform:translateY(-3px);
 }
-            .resume-btn,
-.project-btn,
-.project-btn2,
-.gmail-btn{
-    font-family: 'Poppins', sans-serif;
-}
+
 
 @media (max-width: 768px){
 
@@ -520,12 +505,7 @@ cursor: pointer;
     }
 }
 
-footer{
-    text-align:center;
-    color:white;
-    padding:25px;
-    font-size:16px;
-}
+
 
     </style>
 
@@ -609,21 +589,21 @@ footer{
 
     <div class="contact-box">
 
-        <div class="gmail-icon">
-
-    <a href="mailto:sanjaysugumar2005@gmail.com" class="gmail-btn"> sanjaysugumar2005@gmail.com
+        <div class="button-group">
+    <a href="https://github.com/yourusername" target="_blank" class="github-btn">
+        GitHub
     </a>
-<br><br>
 
-<a href="https://github.com/sanjaysugumar2005" target="_blank" class="github-btn">
-    GitHub Profile
-</a>
-    <br><br>
+    <a href="mailto:sanjaysugumar2005@gmail.com" class="gmail-btn">
+        Gmail
+    </a>
 
-<a href="https://www.linkedin.com/in/sanjay-sugumar/" target="_blank" class="linkedin-btn">
-    LinkedIn Profile
-</a>
+    <a href="https://www.linkedin.com/in/your-linkedin-username/" target="_blank" class="linkedin-btn">
+        LinkedIn
+    </a>
 </div>
+
+        
 
 
         
