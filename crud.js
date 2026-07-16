@@ -1,31 +1,18 @@
-// // CRUD
-// CREATE READ UPDATE DELETE
+// let student={
+//     name:"sanjay",
+//     subject:"sci"
+// };
 
 
-// CREATE
-// let students=["arun","deva"];
-// students.push("sanjay");
-// console.log(students);
 
+// console.log(student);
 
-// READ
+// student.city="chennai";
 
-// let students=["arun","deva"];
-// students.push("sanjay");
-// console.log(students[1]);
-// console.log(students)
+// console.log(student);
 
-// UPDATE
+// console.log(student.name);
 
-// let students=["arun","deva"];
-// students[2]="sanjay";
-// console.log(students)
+// delete student.city;
 
-
-// DELETE
-
-// let students = ["Sanjay", "Rahul", "Kumar"];
-
-// students.splice(1, 1);
-
-// console.log(students);
+// console.log(student);
