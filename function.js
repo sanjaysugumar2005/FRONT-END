@@ -77,3 +77,10 @@
 // parameterthis()
 
 
+function getFullNmae(firstName,lastName){
+    const name=firstName+""+lastName;
+    return name;
+}
+
+let fullName=getFullNmae("sanjay","kumar");
+console.log(fullName);
