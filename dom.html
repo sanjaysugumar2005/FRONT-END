@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON / OFF Button</title>
+</head>
+<body>
+
+    <button id="btn" onclick="toggleButton()">OFF</button>
+
+    <script>
+        function toggleButton() {
+            let button = document.getElementById("btn");
+
+            if (button.innerHTML === "OFF") {
+                button.innerHTML = "ON";
+            } else {
+                button.innerHTML = "OFF";
+            }
+        }
+    </script>
+
+</body>
+</html>

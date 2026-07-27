@@ -2,6 +2,8 @@
 
 
 
+// let i = 1;
+// let str = ""
 
 // 5) Multiples of 3 and 5 
 // 6) Multiples of 3 or 5 
@@ -10,9 +12,7 @@
 
 // 1) 1   1   1   1   1
 
-
-// let i = 1;
-// let str = "";
+;
 // while (i <= 500) {
 //     // str += 1 + ' ';
 //     // str = str + 1 + ' ';
