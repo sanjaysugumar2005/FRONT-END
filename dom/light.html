@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light ON/OFF</title>
+</head>
+<body>
+
+    <h2>Light ON/OFF</h2>
+
+    <img id="bulb"
+         src="bulboff.png"
+         width="100"
+         height="180"
+         onclick="changeImage()">
+
+    <br><br>
+
+    <button onclick="turnOn()">ON</button>
+    <button onclick="turnOff()">OFF</button>
+
+    <script>
+        let isOn = false;
+
+        function changeImage() {
+            let bulb = document.getElementById("bulb");
+
+            if (isOn) {
+                bulb.src = "bulboff.png";
+                isOn = false;
+            } else {
+                bulb.src = "bulbon.png";
+                isOn = true;
+            }
+        }
+
+        function turnOn() {
+            document.getElementById("bulb").src = "bulbon.png";
+            isOn = true;
+        }
+
+        function turnOff() {
+            document.getElementById("bulb").src = "bulboff.png";
+            isOn = false;
+        }
+    </script>
+
+</body>
+</html>
