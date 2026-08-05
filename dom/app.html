@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .card {
+            width: 350px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        img {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fake Store API</h1>
+
+    <button onclick="loadProduct()">Load Product</button>
+
+    <div class="card">
+        <img id="image" src="" alt="Product Image">
+
+       
+    </div>
+
+    <script>
+
+        function loadProduct() {
+
+            fetch("https://fakestoreapi.com/products/1")
+                .then(res => res.json())
+                .then(data => {
+
+                    // Store API response in a variable
+                    let product = data;
+
+                    console.log(product);
+
+                    // Display data
+                    document.getElementById("image").src = product.image;
+                    document.getElementById("title").innerHTML = product.title;
+                    document.getElementById("price").innerHTML = product.price;
+                    document.getElementById("category").innerHTML = product.category;
+                    document.getElementById("description").innerHTML = product.description;
+
+                })
+                .catch(error => {
+                    console.log("Error:", error);
+                });
+
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+

@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>uppercase</title>
+    <title>Uppercase Converter</title>
 </head>
 <body>
-    <input type="uppercase">
+
+    <h2>Uppercase Converter</h2>
+
+    <input type="text" id="text" placeholder="Enter text">
+    <button onclick="convertUpper()">Convert</button>
+
+    <p id="result"></p>
+
+    <script>
+        function convertUpper() {
+            let text = document.getElementById("text").value;
+            let upperText = text.toUpperCase();
+            document.getElementById("result").innerText = upperText;
+        }
+    </script>
+
 </body>
-<script>
-let text = "Hello World!";
-let result = text.toUpperCase();
-</script>
 </html>
