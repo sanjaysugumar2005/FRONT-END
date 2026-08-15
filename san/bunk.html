@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Torrent CNG - Bunk Status</title>
+
+    <link rel="stylesheet" href="bunk-status.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #00ff00;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.356);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: black;
+    margin: 25px 0 15px;
+}
+
+/* Bunk Status */
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px;
+
+    background: #f5f5f5;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+}
+
+.status span {
+    font-weight: bold;
+}
+
+.status strong {
+    color: rgb(97, 211, 97);
+}
+
+/* Labels */
+
+label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+/* Inputs */
+
+input {
+    width: 100%;
+
+    height: 45px;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+
+input:focus {
+    outline: none;
+
+    border-color: #00ff00;
+}
+
+/* Button */
+
+button {
+    width: 100%;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #209b20;
+
+    color: rgb(0, 0, 0);
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #47ce47;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 90%;
+
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+</style>
+<body>
+
+    <div class="container">
+
+        <h1>Torrent CNG</h1>
+
+        <h2>Bunk Status</h2>
+
+        <!-- Bunk Status -->
+        <div class="status">
+            <span>Bunk Status</span>
+            <strong id="bunkStatus">OPEN</strong>
+        </div>
+
+        
+
+        <label for="carNumber">Car Number</label>
+        <input
+            type="text"
+            id="carNumber"
+            placeholder="Enter car number"
+        >
+
+        <label for="carName">Car Name</label>
+        <input
+            type="text"
+            id="carName"
+            placeholder="Enter car name"
+        >
+
+        <button onclick="continueBooking()">
+            Continue
+        </button>
+
+    </div>
+
+    <script src="bunk-status.js"></script>
+
+</body>
+
+</html>
