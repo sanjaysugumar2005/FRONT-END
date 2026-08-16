@@ -1,78 +1,55 @@
-let generatedOTP = "";
-let timeLeft = 30;
-let timer;
+function continueToBunk() {
 
-// Send OTP
-function sendOTP() {
+    const userName =
+        document.getElementById("userName").value.trim();
 
-    let phone = document.querySelector("input[type='tel']").value;
+    const phoneNumber =
+        document.getElementById("phoneNumber").value.trim();
 
-    if (phone.length !== 10) {
-        alert("Please enter a valid 10-digit phone number");
+    const errorMessage =
+        document.getElementById("errorMessage");
+
+
+    // Check username
+
+    if (userName === "") {
+
+        errorMessage.textContent =
+            "Please enter your username.";
+
+        errorMessage.style.display = "block";
+
         return;
     }
 
-    generatedOTP = Math.floor(100000 + Math.random() * 900000);
 
-    alert("Your OTP is: " + generatedOTP);
+    // Check phone number
 
-    startTimer();
-}
+    if (!/^[6-9][0-9]{9}$/.test(phoneNumber)) {
 
-// Resend OTP
-function resendOTP() {
+        errorMessage.textContent =
+            "Please enter a valid 10-digit phone number.";
 
-    generatedOTP = Math.floor(100000 + Math.random() * 900000);
+        errorMessage.style.display = "block";
 
-    alert("New OTP: " + generatedOTP);
-
-    startTimer();
-}
-
-// 30-second timer
-function startTimer() {
-
-    timeLeft = 30;
-
-    let timerText = document.querySelector(".container p");
-
-    timerText.innerHTML =
-        "You can resend OTP in " + timeLeft + " seconds";
-
-    clearInterval(timer);
-
-    timer = setInterval(function () {
-
-        timeLeft--;
-
-        timerText.innerHTML =
-            "You can resend OTP in " + timeLeft + " seconds";
-
-        if (timeLeft <= 0) {
-
-            clearInterval(timer);
-
-            timerText.innerHTML = "You can resend OTP";
-        }
-
-    }, 1000);
-}
-
-// Submit OTP
-function submitOTP() {
-
-    let enteredOTP =
-        document.querySelector("input[type='text']").value;
-
-    if (enteredOTP == generatedOTP) {
-
-        alert("OTP Verified Successfully!");
-
-        // Next page
-        // window.location.href = "booking.html";
-
-    } else {
-
-        alert("Invalid OTP. Please try again.");
+        return;
     }
+
+
+    // Save user details
+
+    localStorage.setItem(
+        "userName",
+        userName
+    );
+
+    localStorage.setItem(
+        "phoneNumber",
+        phoneNumber
+    );
+
+
+    // Go to next page
+
+    window.location.href = "bunktwo.html";
 }

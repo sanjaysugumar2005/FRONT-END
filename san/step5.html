@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Torrent CNG - Booking Confirmed</title>
+
+    <!-- QR CODE LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #080a09;
+
+            color: white;
+
+            min-height: 100vh;
+
+            padding: 20px;
+
+        }
+
+
+        .container {
+
+            width: 100%;
+
+            max-width: 500px;
+
+            margin: auto;
+
+        }
+
+
+        /* HEADER */
+
+        .header {
+
+            text-align: center;
+
+            margin: 15px 0 25px;
+
+        }
+
+
+        .logo {
+
+            width: 58px;
+
+            height: 58px;
+
+            margin: auto;
+
+            border-radius: 18px;
+
+            background: #19c463;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 28px;
+
+            color: black;
+
+        }
+
+
+        .header h1 {
+
+            font-size: 23px;
+
+            margin-top: 13px;
+
+        }
+
+
+        .header p {
+
+            color: #8d968f;
+
+            font-size: 13px;
+
+            margin-top: 6px;
+
+        }
+
+
+        /* SUCCESS */
+
+        .success {
+
+            text-align: center;
+
+            padding: 15px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .success-icon {
+
+            width: 64px;
+
+            height: 64px;
+
+            margin: auto;
+
+            border-radius: 50%;
+
+            background: rgba(25,196,99,0.15);
+
+            border: 2px solid #19c463;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 30px;
+
+            color: #19c463;
+
+        }
+
+
+        .success h2 {
+
+            margin-top: 12px;
+
+            font-size: 21px;
+
+        }
+
+
+        .success p {
+
+            color: #8d968f;
+
+            font-size: 13px;
+
+            margin-top: 6px;
+
+        }
+
+
+        /* TOKEN CARD */
+
+        .token-card {
+
+            text-align: center;
+
+            padding: 25px;
+
+            border-radius: 25px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #101512,
+                    #151a16
+                );
+
+            border:
+                1px solid
+                rgba(25,196,99,0.25);
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .token-label {
+
+            color: #8d968f;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .token {
+
+            color: #19c463;
+
+            font-size: 42px;
+
+            font-weight: bold;
+
+            margin-top: 8px;
+
+        }
+
+
+        .queue {
+
+            color: #8d968f;
+
+            font-size: 12px;
+
+            margin-top: 8px;
+
+        }
+
+
+        /* QR CARD */
+
+        .qr-card {
+
+            text-align: center;
+
+            padding: 25px;
+
+            border-radius: 25px;
+
+            background:
+                rgba(255,255,255,0.05);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+
+            backdrop-filter: blur(15px);
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .qr-card h2 {
+
+            font-size: 18px;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .qr-card p {
+
+            color: #8d968f;
+
+            font-size: 12px;
+
+            line-height: 1.5;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        #qrcode {
+
+            width: 220px;
+
+            height: 220px;
+
+            padding: 10px;
+
+            margin: auto;
+
+            background: white;
+
+            border-radius: 18px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+
+        #qrcode img {
+
+            max-width: 100%;
+
+            max-height: 100%;
+
+        }
+
+
+        /* DETAILS */
+
+        .details {
+
+            padding: 20px;
+
+            border-radius: 22px;
+
+            background:
+                rgba(255,255,255,0.05);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .details h2 {
+
+            font-size: 18px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .detail {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            padding: 12px 0;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.06);
+
+        }
+
+
+        .detail:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .detail span:first-child {
+
+            color: #8d968f;
+
+            font-size: 12px;
+
+        }
+
+
+        .detail span:last-child {
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            text-align: right;
+
+        }
+
+
+        /* BUTTONS */
+
+        .button {
+
+            width: 100%;
+
+            min-height: 52px;
+
+            border: none;
+
+            border-radius: 16px;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            margin-top: 10px;
+
+        }
+
+
+        .primary {
+
+            background: #19c463;
+
+            color: black;
+
+        }
+
+
+        .secondary {
+
+            background: #1c211e;
+
+            color: white;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.1);
+
+        }
+
+
+        .button:active {
+
+            transform: scale(0.98);
+
+        }
+
+
+        /* DESKTOP */
+
+        @media (min-width: 700px) {
+
+            body {
+
+                display: flex;
+
+                justify-content: center;
+
+                align-items: center;
+
+            }
+
+
+            .container {
+
+                padding: 20px 0;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            ⛽
+        </div>
+
+        <h1>
+            TORRENT CNG
+        </h1>
+
+        <p>
+            Smart CNG Slot Booking
+        </p>
+
+    </header>
+
+
+
+    <!-- SUCCESS -->
+
+    <section class="success">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>
+            Booking Confirmed!
+        </h2>
+
+        <p>
+            Your CNG slot has been successfully booked.
+        </p>
+
+    </section>
+
+
+
+    <!-- TOKEN -->
+
+    <section class="token-card">
+
+        <div class="token-label">
+            YOUR TOKEN NUMBER
+        </div>
+
+        <div
+            class="token"
+            id="tokenNumber">
+
+            CNG-001
+
+        </div>
+
+        <div class="queue">
+            Keep this token for your visit.
+        </div>
+
+    </section>
+
+
+
+    <!-- QR -->
+
+    <section class="qr-card">
+
+        <h2>
+            📱 Your Booking QR
+        </h2>
+
+        <p>
+            Show this QR code to the CNG bunk
+            admin for verification.
+        </p>
+
+
+        <div id="qrcode"></div>
+
+    </section>
+
+
+
+    <!-- BOOKING DETAILS -->
+
+    <section class="details">
+
+        <h2>
+            Booking Details
+        </h2>
+
+
+        <div class="detail">
+
+            <span>
+                Car
+            </span>
+
+            <span id="carName">
+                -
+            </span>
+
+        </div>
+
+
+        <div class="detail">
+
+            <span>
+                Car Number
+            </span>
+
+            <span id="carNumber">
+                -
+            </span>
+
+        </div>
+
+
+        <div class="detail">
+
+            <span>
+                Date
+            </span>
+
+            <span id="bookingDate">
+                -
+            </span>
+
+        </div>
+
+
+        <div class="detail">
+
+            <span>
+                Time
+            </span>
+
+            <span id="bookingTime">
+                -
+            </span>
+
+        </div>
+
+
+        <div class="detail">
+
+            <span>
+                CNG Bunk
+            </span>
+
+            <span id="bunkName">
+                -
+            </span>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- BUTTONS -->
+
+    <button
+        class="button primary"
+        onclick="goHome()">
+
+        🏠 BACK TO HOME
+
+    </button>
+
+
+    <button
+        class="button secondary"
+        onclick="window.print()">
+
+        🖨️ SAVE / PRINT TOKEN
+
+    </button>
+
+
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="step5.js"></script>
+
+
+</body>
+
+</html>

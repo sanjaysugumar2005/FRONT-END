@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Car Details - Torrent CNG</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: white;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 420px;
+            padding: 40px;
+
+            background: white;
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+            text-align: center;
+        }
+
+        h3 {
+            color: #399e0a;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            color: #399e0a;
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        /* BUNK STATUS */
+
+        .status-box {
+            padding: 15px;
+
+            border-radius: 12px;
+
+            background: #eaf8e5;
+
+            margin-bottom: 25px;
+        }
+
+        .status-title {
+            font-size: 14px;
+            color: #555;
+
+            margin-bottom: 5px;
+        }
+
+        .status {
+            color: #399e0a;
+
+            font-size: 20px;
+
+            font-weight: bold;
+        }
+
+        /* USER */
+
+        .welcome {
+            margin-bottom: 25px;
+
+            color: #333;
+
+            font-size: 15px;
+        }
+
+        label {
+            display: block;
+
+            text-align: left;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+
+            height: 45px;
+
+            padding: 10px;
+
+            border: 1px solid #399e0a;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+
+            margin-bottom: 20px;
+
+            text-transform: uppercase;
+        }
+
+        input:focus {
+            outline: none;
+
+            border-color: #209b20;
+
+            box-shadow: 0 0 5px rgba(57, 158, 10, 0.2);
+        }
+
+        .car-example {
+            text-align: left;
+
+            font-size: 12px;
+
+            color: #777;
+
+            margin-top: -12px;
+
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+
+            height: 45px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #399e0a;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #209b20;
+        }
+
+        .error {
+            color: red;
+
+            font-size: 14px;
+
+            margin-top: 15px;
+
+            display: none;
+        }
+
+        @media (max-width: 500px) {
+
+            .container {
+                width: 90%;
+
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h3>🚗 Torrent CNG</h3>
+
+        <h1>Car Details</h1>
+
+
+        <!-- BUNK STATUS -->
+
+        <div class="status-box">
+
+            <div class="status-title">
+                CNG Bunk Status
+            </div>
+
+            <div class="status">
+                🟢 OPEN
+            </div>
+
+        </div>
+
+
+        <!-- USER -->
+
+        <p class="welcome">
+
+            Welcome,
+            <strong id="displayUserName">
+                User
+            </strong>
+
+        </p>
+
+
+        <!-- CAR NUMBER -->
+
+        <label for="carNumber">
+            Car Number
+        </label>
+
+        <input
+            type="text"
+            id="carNumber"
+            placeholder="TN31NS1234"
+            maxlength="10"
+        >
+
+        <p class="car-example">
+
+        </p>
+
+
+        <!-- CAR MODEL -->
+
+        <label for="carModel">
+            Car Model Name
+        </label>
+
+        <input
+            type="text"
+            id="carModel"
+            placeholder="Enter your car model"
+            maxlength="40"
+        >
+
+
+        <!-- CONTINUE -->
+
+        <button onclick="continueToBooking()">
+            CONTINUE
+        </button>
+
+
+        <p id="errorMessage" class="error"></p>
+
+    </div>
+
+
+    <script src="bunktwo.js"></script>
+
+</body>
+
+</html>
