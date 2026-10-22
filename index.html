@@ -1,488 +1,1026 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-<style>
-    /* ===== Microsoft Premium Theme ===== */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
 
-html{
-    scroll-behavior:smooth;
-    -webkit-text-size-adjust:100%;
-}
+    <meta
+        name="description"
+        content="Sanjay Sugumar - Python Developer and Full Stack Developer Portfolio"
+    >
 
-:root{
-    --bg:#0f172a;              /* deep navy */
-    --surface:#111827;         /* card background */
-    --surface-2:#1f2937;
-    --primary:#2563eb;         /* Microsoft blue */
-    --primary-hover:#1d4ed8;
-    --text:#f8fafc;
-    --muted:#cbd5e1;
-    --border:#334155;
-    --shadow:0 10px 30px rgba(0,0,0,.35);
-    --radius:22px;
-}
+    <title>Sanjay Sugumar | Python Developer | Full Stack Developer</title>
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(180deg,#0b1220 0%, #0f172a 50%, #111827 100%);
-    color:var(--text);
-    line-height:1.7;
-    overflow-x:hidden;
-}
-
-h2,h3{
-    font-family:'Montserrat',sans-serif;
-    letter-spacing:.2px;
-}
-
-.background{
-    width:100%;
-    min-height:100vh;
-    padding-bottom:48px;
-}
-
-/* ===== Sticky Navigation ===== */
-.info{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:34px;
-    padding:16px 20px;
-    background:rgba(15,23,42,.78);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.info a{
-    color:var(--text);
-    text-decoration:none;
-    font-size:16px;
-    font-weight:600;
-    padding:10px 14px;
-    border-radius:12px;
-    transition:.25s ease;
-}
-
-.info a:hover{
-    background:rgba(37,99,235,.14);
-    color:#fff;
-}
-
-/* ===== Shared Card Style ===== */
-.box,
-.resumebox,
-.education-box,
-.project-box,
-.contact-box{
-    width:min(92%, 860px);
-    margin:28px auto 64px;
-    padding:32px;
-    border-radius:var(--radius);
-    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
-    border:1px solid rgba(255,255,255,.08);
-    box-shadow:var(--shadow);
-    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-}
-
-.box:hover,
-.resumebox:hover,
-.education-box:hover,
-.project-box:hover,
-.contact-box:hover{
-    transform:translateY(-6px);
-    border-color:rgba(37,99,235,.55);
-    box-shadow:0 18px 40px rgba(37,99,235,.18);
-}
-
-/* ===== Hero Section ===== */
-.box{
-    text-align:center;
-    padding-top:42px;
-    padding-bottom:42px;
-}
-
-.box img{
-    width:160px;
-    height:160px;
-    border-radius:50%;
-    object-fit:cover;
-    border:4px solid rgba(255,255,255,.08);
-    box-shadow:0 0 0 8px rgba(37,99,235,.14), 0 18px 34px rgba(0,0,0,.45);
-    margin:0 auto 18px;
-}
-
-.box h2{
-    font-size:clamp(2rem, 5vw, 3.25rem);
-    margin-top:8px;
-}
-
-.box p{
-    margin-top:14px;
-    color:var(--muted);
-    font-size:1.02rem;
-}
-
-/* ===== Typing Effect ===== */
-.typing{
-    display:inline-block;
-    margin-top:8px;
-    font-size:clamp(1rem, 3.2vw, 1.35rem);
-    color:#dbeafe;
-    overflow:hidden;
-    white-space:nowrap;
-    border-right:3px solid var(--primary);
-    width:0;
-    animation:typing 8s steps(27,end) infinite,
-              blink .8s step-end infinite;
-}
-
-@keyframes typing{
-    0%{width:0}
-    40%{width:27ch}
-    60%{width:27ch}
-    100%{width:0}
-}
-
-@keyframes blink{
-    50%{border-color:transparent}
-}
-
-/* ===== Section Headings ===== */
-.Resume h2,
-.Education h2,
-.Project h2,
-.Contact h2{
-    width:min(92%, 860px);
-    margin:34px auto 18px;
-    font-size:clamp(1.5rem, 4vw, 2.2rem);
-}
-
-/* ===== Skills ===== */
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:14px;
-}
-
-.skills span{
-    padding:10px 14px;
-    border-radius:999px;
-    background:rgba(37,99,235,.14);
-    border:1px solid rgba(37,99,235,.35);
-    color:#dbeafe;
-    font-size:14px;
-    font-weight:600;
-}
-
-/* ===== Education ===== */
-.school{
-    width:100%;
-    padding:8px 4px;
-    color:var(--text);
-}
-
-.school h3{
-    margin-bottom:8px;
-    font-size:1.15rem;
-}
-
-.school p{
-    color:var(--muted);
-}
-
-/* ===== Buttons ===== */
-.resume-btn,
-.project-btn,
-.project-btn2,
-.github-btn,
-.gmail-btn,
-.linkedin-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-width:190px;
-    padding:13px 22px;
-    border-radius:999px;
-    background:var(--primary);
-    color:#fff;
-    text-decoration:none;
-    font-weight:700;
-    border:1px solid transparent;
-    transition:transform .2s ease, background .2s ease, box-shadow .2s ease;
-    box-shadow:0 10px 24px rgba(37,99,235,.28);
-}
-
-.resume-btn:hover,
-.project-btn:hover,
-.project-btn2:hover,
-.github-btn:hover,
-.gmail-btn:hover,
-.linkedin-btn:hover{
-    background:var(--primary-hover);
-    transform:translateY(-2px);
-    box-shadow:0 14px 30px rgba(37,99,235,.36);
-}
-
-.button-group{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:14px;
-    margin-top:26px;
-}
-
-/* ===== Footer ===== */
-footer{
-    text-align:center;
-    padding:28px 16px;
-    color:#94a3b8;
-    font-size:15px;
-    border-top:1px solid rgba(255,255,255,.08);
-    background:transparent;
-}
-
-/* ===== iPhone & Mobile Optimization ===== */
-@media (max-width: 768px){
-
-    .info{
-        gap:10px;
-        padding:12px 10px;
-        flex-wrap:wrap;
-    }
-
-    .info a{
-        font-size:14px;
-        padding:9px 12px;
-    }
-
-    .box,
-    .resumebox,
-    .education-box,
-    .project-box,
-    .contact-box{
-        width:94%;
-        padding:24px 18px;
-        margin-bottom:40px;
-        border-radius:20px;
-    }
-
-    .box img{
-        width:128px;
-        height:128px;
-    }
-
-    .box h2{
-        font-size:2rem;
-    }
-
-    .box p{
-        font-size:15px;
-    }
-
-    .typing{
-        font-size:1rem;
-        max-width:100%;
-    }
-
-    .Resume h2,
-    .Education h2,
-    .Project h2,
-    .Contact h2{
-        width:94%;
-        font-size:1.6rem;
-        margin-top:22px;
-    }
-
-    .project-box div{
-        display:flex;
-        flex-direction:column;
-        gap:12px;
-        width:100%;
-    }
-
-    .resume-btn,
-    .project-btn,
-    .project-btn2,
-    .github-btn,
-    .gmail-btn,
-    .linkedin-btn{
-        width:100%;
-        min-width:0;
-    }
-}
-
-/* ===== iPhone SE / small phones ===== */
-@media (max-width: 430px){
-
-    .info{
-        justify-content:space-between;
-        gap:8px;
-    }
-
-    .info a{
-        font-size:13px;
-        padding:8px 10px;
-    }
-
-    .box{
-        padding-top:28px;
-        padding-bottom:28px;
-    }
-
-    .box img{
-        width:112px;
-        height:112px;
-    }
-
-    .box h2{
-        font-size:1.7rem;
-    }
-
-    .typing{
-        font-size:.95rem;
-    }
-
-    .school h3{
-        font-size:1rem;
-    }
-
-    .school p{
-        font-size:.95rem;
-    }
-}
-
-/* ===== Large desktop ===== */
-@media (min-width: 1200px){
-    .box,
-    .resumebox,
-    .education-box,
-    .project-box,
-    .contact-box{
-        width:min(88%, 980px);
-    }
-}
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="background">
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header class="navbar">
 
-        <div class="info">
+        <div class="nav-container">
 
-            <a href="#Home">Home</a>
-            <a href="#Resume">Resume</a>
-            <a href="#Education">Education</a>
-            <a href="#Project">Project</a>
-            <a href="#Contact">Contact</a>
+            <a href="#home" class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span>Sanjay <strong>Sugumar</strong></span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+            <a href="#contact" class="hire-btn">
+                <span class="hire-dot"></span>
+                Hire Me
+                <span class="arrow">→</span>
+            </a>
+
         </div>
 
-        <div>
-            <div class="box" id="Home">
-                <img src="sanjay/sanjay.jpg" alt="">
-                <h2>Sanjay</h2>
-                <p class="typing">Python Full Stack Developer</p>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO SECTION
+        ========================== -->
+        <section class="hero" id="home">
+
+            <!-- Decorative Elements -->
+            <div class="hero-glow hero-glow-green"></div>
+            <div class="hero-glow hero-glow-purple"></div>
+
+            <div class="hero-container">
+
+                <!-- LEFT SIDE -->
+                <div class="hero-visual">
+
+                    <div class="dot-pattern"></div>
+
+                    <div class="profile-card">
+
+                        <div class="profile-top-icon">
+                            &lt;/&gt;
+                        </div>
+
+                        <div class="profile-glow"></div>
+
+                        <img
+                            src="photo/profile.png"
+                            alt="Sanjay Sugumar"
+                            class="profile-image"
+                        >
+
+                        <div class="profile-overlay"></div>
+
+                        <div class="profile-text">
+
+                            <span>CODE</span>
+
+                            <strong>BUILD</strong>
+
+                            <span>GROW</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="lime-star">✦</div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE -->
+                <div class="hero-content">
+
+                    <div class="role-row">
+
+                        <span class="role-pill role-python">
+                            <span class="python-symbol">Py</span>
+                            Python Developer
+                        </span>
+
+                        <span class="role-divider">|</span>
+
+                        <span class="role-pill role-fullstack">
+                            <span>◈</span>
+                            Full Stack Developer
+                        </span>
+
+                    </div>
+
+
+                    <h1>
+                        Sanjay
+                        <span>Sugumar</span>
+                    </h1>
+
+
+                    <h2 class="hero-tagline">
+                        Build. Code. Make an
+                        <span>Impact.</span>
+                    </h2>
+
+
+                    <p class="hero-description">
+                        I'm a BCA graduate (May 2026) with a passion for
+                        Python, web development and modern technologies.
+                        I love building web apps that solve real problems
+                        and create a better user experience.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a href="#projects" class="primary-btn">
+                            View Projects
+                            <span>→</span>
+                        </a>
+
+                        <a href="resume.html" class="secondary-btn">
+                            <span class="download-icon">↓</span>
+                            Download CV
+                        </a>
+
+                    </div>
+
+
+                    <div class="social-links">
+
+                        <a
+                            href="https://github.com/sanjaysugumar2005"
+                            target="_blank"
+                            aria-label="GitHub"
+                        >
+                            GH
+                        </a>
+
+                        <a
+                            href="https://linkedin.com/in/sanjay-sugumar-8a90ba3b3"
+                            target="_blank"
+                            aria-label="LinkedIn"
+                        >
+                            in
+                        </a>
+
+                        <a
+                            href="mailto:sanjaysugumar2817@gmail.com"
+                            aria-label="Email"
+                        >
+                            @
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
-        </div>
-        <div>
-            <div class="Resume" id="Resume">
-                <h2> Resume</h2>
+
+
+            <div class="hero-bottom-decoration">
+
+                <span>SCROLL TO EXPLORE</span>
+
+                <div class="scroll-line"></div>
+
+                <span>01 / 06</span>
+
             </div>
-            <div class="resumebox">
-                <a href="resume.html" class="resume-btn"> View Resume </a>
-            
+
+        </section>
 
 
-<div class="skills">
-    <span>Python</span>
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-    <!-- <span>Git</span> -->
-    <span>GitHub</span>
-    <!-- <span>MySQL</span> -->
-</div>
-</div>
+        <!-- =========================
+             ABOUT SECTION
+        ========================== -->
+        <section class="about section" id="about">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-number">01</span>
+                        <span class="section-label">ABOUT ME</span>
+                    </div>
+
+                    <span class="heading-line"></span>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <!-- LEFT -->
+                    <div class="about-intro">
+
+                        <p class="small-label">
+                            WHO I AM
+                        </p>
+
+                        <h2>
+                            Turning ideas
+                            <br>
+                            into <span>real solutions.</span>
+                        </h2>
+
+                        <p class="about-description">
+                            I'm Sanjay, a passionate Python and Full Stack
+                            Developer who enjoys transforming ideas into
+                            useful and user-friendly digital experiences.
+                        </p>
+
+                        <p class="about-description">
+                            I enjoy working across the frontend and backend,
+                            building responsive interfaces, REST APIs,
+                            database-driven applications and practical
+                            web solutions.
+                        </p>
+
+
+                        <div class="about-tags">
+
+                            <span>
+                                <b>●</b>
+                                Chennai, Tamil Nadu
+                            </span>
+
+                            <span>
+                                <b>✦</b>
+                                BCA Graduate · 2026
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RIGHT -->
+                    <div class="about-cards">
+
+                        <div class="about-card">
+
+                            <div class="about-card-number">
+                                01
+                            </div>
+
+                            <div class="about-card-icon">
+                                &lt;/&gt;
+                            </div>
+
+                            <h3>
+                                Python Development
+                            </h3>
+
+                            <p>
+                                Building backend applications,
+                                APIs and practical Python solutions.
+                            </p>
+
+                        </div>
+
+
+                        <div class="about-card purple-card">
+
+                            <div class="about-card-number">
+                                02
+                            </div>
+
+                            <div class="about-card-icon">
+                                ◇
+                            </div>
+
+                            <h3>
+                                Full Stack Development
+                            </h3>
+
+                            <p>
+                                Creating complete web experiences
+                                from responsive UI to backend systems.
+                            </p>
+
+                        </div>
+
+
+                        <div class="about-card lime-card">
+
+                            <div class="about-card-number">
+                                03
+                            </div>
+
+                            <div class="about-card-icon">
+                                ↗
+                            </div>
+
+                            <h3>
+                                Problem Solving
+                            </h3>
+
+                            <p>
+                                Turning real-world requirements into
+                                simple and effective digital solutions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SKILLS SECTION
+        ========================== -->
+        <section class="skills section" id="skills">
+
+            <div class="skills-glow"></div>
+
+            <div class="section-container">
+
+                <div class="section-heading light-heading">
+
+                    <div>
+                        <span class="section-number">02</span>
+                        <span class="section-label">TECHNICAL SKILLS</span>
+                    </div>
+
+                    <span class="heading-line"></span>
+
+                </div>
+
+
+                <div class="skills-header">
+
+                    <div>
+
+                        <p class="small-label">
+                            MY TOOLBOX
+                        </p>
+
+                        <h2>
+                            Technologies I
+                            <span>work with.</span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        A practical stack focused on building modern,
+                        responsive and reliable web applications.
+                    </p>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+                    <div class="skill-box">
+                        <span class="skill-index">01</span>
+                        <span class="skill-icon">Py</span>
+                        <h3>Python</h3>
+                        <p>Programming & Backend</p>
+                    </div>
+
+                    <div class="skill-box">
+                        <span class="skill-index">02</span>
+                        <span class="skill-icon">JS</span>
+                        <h3>JavaScript</h3>
+                        <p>Logic & Interactions</p>
+                    </div>
+
+                    <div class="skill-box">
+                        <span class="skill-index">03</span>
+                        <span class="skill-icon">&lt;/&gt;</span>
+                        <h3>HTML5</h3>
+                        <p>Web Structure</p>
+                    </div>
+
+                    <div class="skill-box">
+                        <span class="skill-index">04</span>
+                        <span class="skill-icon">#</span>
+                        <h3>CSS3</h3>
+                        <p>Responsive Design</p>
+                    </div>
+
+                    <div class="skill-box">
+                        <span class="skill-index">05</span>
+                        <span class="skill-icon">R</span>
+                        <h3>React</h3>
+                        <p>Frontend Development</p>
+                    </div>
+
+                    <div class="skill-box">
+                        <span class="skill-index">06</span>
+                        <span class="skill-icon">SQL</span>
+                        <h3>SQL</h3>
+                        <p>Database Management</p>
+                    </div>
+<!-- 
+                    <div class="skill-box">
+                        <span class="skill-index">07</span>
+                        <span class="skill-icon">Fl</span>
+                        <h3>Flask</h3>
+                        <p>Python Web Framework</p>
+                    </div> -->
+
+                    <!-- <div class="skill-box">
+                        <span class="skill-index">08</span>
+                        <span class="skill-icon">DB</span>
+                        <h3>SQLite</h3>
+                        <p>Database</p>
+                    </div> -->
+
+                    <!-- <div class="skill-box">
+                        <span class="skill-index">09</span>
+                        <span class="skill-icon">API</span>
+                        <h3>REST APIs</h3>
+                        <p>Backend Communication</p>
+                    </div> -->
+
+                    <div class="skill-box">
+                        <span class="skill-index">10</span>
+                        <span class="skill-icon">Git</span>
+                        <h3>Git</h3>
+                        <p>Version Control</p>
+                    </div>
+
+                    <div class="skill-box">
+                        <span class="skill-index">11</span>
+                        <span class="skill-icon">GH</span>
+                        <h3>GitHub</h3>
+                        <p>Code Hosting</p>
+                    </div>
+
+                    <div class="skill-box">
+                        <span class="skill-index">12</span>
+                        <span class="skill-icon">VS</span>
+                        <h3>VS Code</h3>
+                        <p>Development</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECTS SECTION
+        ========================== -->
+        <section class="projects section" id="projects">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-number">03</span>
+                        <span class="section-label">SELECTED PROJECTS</span>
+                    </div>
+
+                    <span class="heading-line"></span>
+
+                </div>
+
+
+                <div class="projects-title">
+
+                    <div>
+
+                        <p class="small-label">
+                            MY WORK
+                        </p>
+
+                        <h2>
+                            Things I've
+                            <span>built.</span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Real projects where design, development and
+                        problem-solving come together.
+                    </p>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+                    <!-- PROJECT 1 -->
+                    <article class="project-card project-large">
+
+                        <div class="project-number">
+                            01
+                        </div>
+
+                        <div class="project-visual cocoon">
+
+                            <div class="project-window">
+
+                                <div class="window-top">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="fake-site">
+                                    <small>LE COCOON</small>
+                                    <strong>
+                                        A peaceful stay
+                                        <br>
+                                        in Pondicherry.
+                                    </strong>
+
+                                    <div class="fake-button">
+                                        BOOK YOUR STAY
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <div class="project-meta">
+                                WEB DEVELOPMENT · 01
+                            </div>
+
+                            <h3>
+                                Le Cocoon
+                            </h3>
+
+                            <p>
+                                Responsive homestay website and
+                                booking experience designed for a
+                                premium stay in Pondicherry.
+                            </p>
+
+                            <div class="tech-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Responsive</span>
+                            </div>
+
+                            <a
+                                href="https://le-cocoon.netlify.app"
+                                target="_blank"
+                                class="project-link"
+                            >
+                                View Live
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 2 -->
+                    <article class="project-card">
+
+                        <div class="project-number">
+                            02
+                        </div>
+
+                        <div class="project-visual inlineasy">
+
+                            <div class="mini-dashboard">
+
+                                <span class="mini-logo">
+                                    IN<span>LINEASY</span>
+                                </span>
+
+                                <strong>
+                                    Smart Slot
+                                    <br>
+                                    Booking
+                                </strong>
+
+                                <div class="token-box">
+                                    TOKEN
+                                    <b>CNG943</b>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <div class="project-meta">
+                                FULL STACK · 02
+                            </div>
+
+                            <h3>
+                                INLINEASY
+                            </h3>
+
+                            <p>
+                                Smart CNG booking and token
+                                management platform.
+                            </p>
+
+                            <div class="tech-tags">
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>SQLite</span>
+                                <span>REST API</span>
+                            </div>
+
+                            <a
+                                href="https://inlineasy-cng.netlify.app"
+                                target="_blank"
+                                class="project-link"
+                            >
+                                View Live
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 3 -->
+                    <article class="project-card">
+
+                        <div class="project-number">
+                            03
+                        </div>
+
+                        <div class="project-visual restaurant">
+
+                            <div class="restaurant-ui">
+
+                                <span>INLINEASY</span>
+
+                                <strong>
+                                    Restaurant
+                                    <br>
+                                    Ordering
+                                </strong>
+
+                                <div class="food-circles">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <div class="project-meta">
+                                WEB APPLICATION · 03
+                            </div>
+
+                            <h3>
+                                INLINEASY Restaurant
+                            </h3>
+
+                            <p>
+                                Modern restaurant ordering system
+                                with menu, cart and checkout flow.
+                            </p>
+
+                            <div class="tech-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <a
+                                href="#"
+                                class="project-link"
+                            >
+                                View Project
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 4 -->
+                    <article class="project-card">
+
+                        <div class="project-number">
+                            04
+                        </div>
+
+                        <div class="project-visual tossconf">
+
+                            <div class="conference-ui">
+
+                                <span>TOSSConf</span>
+
+                                <strong>
+                                    2026
+                                </strong>
+
+                                <small>
+                                    CONFERENCE
+                                </small>
+
+                                <div class="conference-line"></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <div class="project-meta">
+                                EVENT PLATFORM · 04
+                            </div>
+
+                            <h3>
+                                TOSSConf 2026
+                            </h3>
+
+                            <p>
+                                Responsive registration and payment
+                                website for a conference event.
+                            </p>
+
+                            <div class="tech-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Payment</span>
+                            </div>
+
+                            <a
+                                href="#"
+                                class="project-link"
+                            >
+                                View Project
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EDUCATION SECTION
+        ========================== -->
+        <section class="education section" id="education">
+
+            <div class="education-decoration"></div>
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-number">04</span>
+                        <span class="section-label">EDUCATION</span>
+                    </div>
+
+                    <span class="heading-line"></span>
+
+                </div>
+
+
+                <div class="education-title">
+
+                    <p class="small-label">
+                        MY JOURNEY
+                    </p>
+
+                    <h2>
+                        Learning today.
+                        <span>Building tomorrow.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-year">
+                            2023 — 2026
+                        </div>
+
+                        <div class="education-card">
+
+                            <span class="education-type">
+                                BACHELOR'S DEGREE
+                            </span>
+
+                            <h3>
+                                Bachelor of Computer Applications
+                            </h3>
+
+                            <h4>
+                                MADRAS UNIVERSITY,Am Jain College Chennai
+                            </h4>
+
+                            <p>
+                                Built a strong foundation in programming,
+                                web development, databases and software
+                                development concepts.
+                            </p>
+
+                            <span class="education-status">
+                                GRADUATED · MAY 2026
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-year">
+                            2023
+                        </div>
+
+                        <div class="education-card">
+
+                            <span class="education-type">
+                                HIGHER SECONDARY
+                            </span>
+
+                            <h3>
+                                HSC
+                            </h3>
+
+                            <h4>
+                                Krishnaswamy School
+                            </h4>
+
+                            <p>
+                                Completed Higher Secondary education
+                                and began developing an interest in
+                                technology and programming.
+                            </p>
+
+                            <span class="education-status">
+                                COMPLETED · 2023
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT SECTION
+        ========================== -->
+        <section class="contact section" id="contact">
+
+            <div class="contact-glow"></div>
+
+            <div class="section-container">
+
+                <div class="section-heading light-heading">
+
+                    <div>
+                        <span class="section-number">05</span>
+                        <span class="section-label">CONTACT</span>
+                    </div>
+
+                    <span class="heading-line"></span>
+
+                </div>
+
+
+                <div class="contact-content">
+
+                    <p class="small-label">
+                        LET'S CONNECT
+                    </p>
+
+                    <h2>
+                        Have an idea?
+                        <br>
+                        <span>Let's build it.</span>
+                    </h2>
+
+                    <p>
+                        I'm open to entry-level opportunities,
+                        internships, collaborations and interesting
+                        development projects.
+                    </p>
+
+
+                    <a
+                        href="mailto:sanjaysugumar2817@gmail.com"
+                        class="contact-button"
+                    >
+                        Start a Conversation
+                        <span>→</span>
+                    </a>
+
+
+                    <div class="contact-details">
+
+                        <a href="mailto:sanjaysugumar2817@gmail.com">
+                            sanjaysugumar2817@gmail.com
+                        </a>
+
+                        <span>·</span>
+
+                        <a
+                            href="https://github.com/sanjaysugumar2005"
+                            target="_blank"
+                        >
+                            GitHub
+                        </a>
+
+                        <span>·</span>
+
+                        <a
+                            href="https://linkedin.com/in/sanjay-sugumar-8a90ba3b3"
+                            target="_blank"
+                        >
+                            LinkedIn
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-logo">
+                Sanjay <span>Sugumar</span>
+            </div>
+
+            <p>
+                Designed & Built with code.
+            </p>
+
+            <span>
+                © 2026 Sanjay Sugumar
+            </span>
+
         </div>
 
-
-        <div class="Education" id="Education">
-            <h2>Education</h2>
-        </div>
-        <div class="education-box">
-           
-            
-         <div class="school">   
-            <h3>Bachelor of Computer Applications (BCA)</h3>
-            <p>A.M. Jain College, Chennai</p>
-            <p>Graduated: 2026</p>
-
-            <h3>Higher Secondary Certificate (HSC)</h3>
-            <p>Krishnaswamy School</p>
-            <p>Completed: 2023</p>
-      
-        </div>
-        </div>
-        <div class="Project" id="Project">
-            <h2>Project</h2>
-
-        </div>  
-        <div class="project-box">
-           <div>
-            <a href="https://github.com/sanjaysugumar2005/PAIYALGAM-PYTHON" class="project-btn">python Project</a>
-           <a href="https://github.com/sanjaysugumar2005/FRONT-END" class="project-btn2"> Html Css Project</a>
-        </div> 
-
-        </div>
-  
-    <div class="Contact" id="Contact">
-        <h2> Contact </h2>
-    </div>
-
-    <div class="contact-box">
-
-        <div class="button-group">
-    <a href="https://github.com/yourusername" target="_blank" class="github-btn">
-        GitHub
-    </a>
-
-    <a href="mailto:sanjaysugumar2005@gmail.com" class="gmail-btn">
-        Gmail
-    </a>
-
-    <a href="https://www.linkedin.com/in/your-linkedin-username/" target="_blank" class="linkedin-btn">
-        LinkedIn
-    </a>
-</div>
-
-        
+    </footer>
 
 
-        
-    </div>
-
-  </div>
-
-  <footer>
-    <p>© 2026 Sanjay Sugumar | Built with HTML & CSS</p>
-</footer>
 </body>
-
 </html>
