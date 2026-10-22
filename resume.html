@@ -1,282 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Sanjay S - Resume</title>
-
-<style>
-
-/* =========================================
-   PAGE
-========================================= */
-
-@page {
-    size: A4;
-    margin: 0;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background: #ffffff;
-    color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sanjay S | Python Full Stack Developer</title>
+
+    <meta name="description"
+        content="Sanjay S - Python Full Stack Developer skilled in Python, Flask, REST APIs, JavaScript, React, SQL, SQLite and Git.">
+
+    <style>
+
+        /* ==============================
+           RESET
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* ==============================
+           A4 PAGE
+        ============================== */
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            background: #e5e5e5;
+            color: #111;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 9.2pt;
+            line-height: 1.28;
+        }
+
+        .resume {
+            width: 210mm;
+            height: 297mm;
+            margin: 10px auto;
+            padding: 10mm 13mm;
+            background: #fff;
+            overflow: hidden;
+        }
+
+
+        /* ==============================
+           HEADER
+        ============================== */
+
+        header {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .name {
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 2px;
+        }
+
+        .job-title {
+            font-size: 12.5px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .contact {
+            font-size: 8.5pt;
+            line-height: 1.45;
+        }
+
+        .contact a {
+            color: #111;
+            text-decoration: none;
+        }
+
+        .header-line {
+            border-bottom: 1.4px solid #111;
+            margin-top: 6px;
+        }
+
+
+        /* ==============================
+           SECTIONS
+        ============================== */
+
+        section {
+            margin-bottom: 7px;
+        }
+
+        .section-title {
+            font-size: 10.2pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            border-bottom: 1px solid #222;
+            padding-bottom: 2px;
+            margin-bottom: 4px;
+        }
 
-/* =========================================
-   RESUME
-========================================= */
 
-.resume {
-    width: 210mm;
-    min-height: 297mm;
-    margin: 0 auto;
-    padding: 10mm 13mm;
-    background: #ffffff;
-}
+        /* ==============================
+           SUMMARY
+        ============================== */
+
+        .summary {
+            text-align: left;
+        }
+
+
+        /* ==============================
+           SKILLS
+        ============================== */
+
+        .skills p {
+            margin-bottom: 1.5px;
+        }
+
+        .skills strong {
+            font-weight: 700;
+        }
 
 
-/* =========================================
-   HEADER
-========================================= */
+        /* ==============================
+           PROJECTS
+        ============================== */
 
-.header {
-    text-align: center;
-    border-bottom: 2px solid #000000;
-    padding-bottom: 7px;
-}
+        .project {
+            margin-bottom: 6px;
+        }
+
+        .project-title {
+            font-size: 9.5pt;
+            font-weight: 700;
+        }
+
+        .project-tech {
+            font-size: 8.5pt;
+            margin: 1px 0 2px;
+        }
+
+        .project-tech a {
+            color: #111;
+            text-decoration: underline;
+        }
+
+        ul {
+            margin-left: 16px;
+        }
+
+        li {
+            margin-bottom: 1.5px;
+            padding-left: 1px;
+        }
+
+
+        /* ==============================
+           EDUCATION
+        ============================== */
+
+        .education-item {
+            margin-bottom: 3px;
+        }
+
+        .education-details {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .education-title {
+            font-weight: 700;
+        }
+
+        .education-date {
+            white-space: nowrap;
+        }
+
+
+        /* ==============================
+           PRINT
+        ============================== */
+
+        @media print {
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+
+            html,
+            body {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                padding: 0;
+                background: #fff;
+            }
+
+            .resume {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                padding: 10mm 13mm;
+                overflow: hidden;
+            }
+
+            a {
+                color: #111 !important;
+                text-decoration: none !important;
+            }
+        }
+
+
+        /* ==============================
+           MOBILE PREVIEW
+        ============================== */
+
+        @media screen and (max-width: 800px) {
+
+            body {
+                background: #fff;
+                font-size: 13px;
+            }
+
+            .resume {
+                width: 100%;
+                height: auto;
+                min-height: 100vh;
+                margin: 0;
+                padding: 25px 20px;
+                overflow: visible;
+            }
+
+            .education-details {
+                display: block;
+            }
+
+            .education-date {
+                margin-top: 1px;
+            }
+        }
+
+    </style>
 
-.name {
-    margin: 0;
-    font-size: 25px;
-    font-weight: 800;
-    letter-spacing: 0.8px;
-    color: #000000;
-}
-
-.role {
-    margin-top: 3px;
-    font-size: 11px;
-    font-weight: 700;
-    color: #000000;
-}
-
-.contact {
-    margin-top: 6px;
-    font-size: 8.5px;
-    line-height: 1.55;
-    color: #000000;
-}
-
-
-/* =========================================
-   BLUE LINKS
-========================================= */
-
-.contact a,
-.project-meta a {
-    color: #0000EE;
-    text-decoration: underline;
-}
-
-.contact a:visited,
-.project-meta a:visited {
-    color: #0000EE;
-}
-
-.contact a:hover,
-.project-meta a:hover {
-    color: #0000EE;
-}
-
-
-/* =========================================
-   SECTIONS
-========================================= */
-
-.section {
-    margin-top: 7px;
-}
-
-.section-title {
-    margin: 0 0 4px 0;
-    padding-bottom: 3px;
-
-    color: #000000;
-
-    font-size: 10.5px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.9px;
-
-    border-bottom: 1px solid #000000;
-}
-
-
-/* =========================================
-   PROFESSIONAL SUMMARY
-========================================= */
-
-.summary {
-    margin: 0;
-
-    color: #000000;
-
-    font-size: 8.7px;
-    line-height: 1.43;
-
-    text-align: justify;
-}
-
-
-/* =========================================
-   TECHNICAL SKILLS
-========================================= */
-
-.skills {
-    display: grid;
-    grid-template-columns: 108px 1fr;
-
-    color: #000000;
-
-    font-size: 8.4px;
-    line-height: 1.38;
-}
-
-.skill-name {
-    font-weight: 700;
-    color: #000000;
-}
-
-.skill-value {
-    padding-left: 3px;
-    color: #000000;
-}
-
-
-/* =========================================
-   PROJECTS
-========================================= */
-
-.project {
-    margin-bottom: 6px;
-}
-
-.project:last-child {
-    margin-bottom: 0;
-}
-
-.project-title {
-    margin: 0 0 2px 0;
-
-    color: #000000;
-
-    font-size: 9.5px;
-    font-weight: 800;
-}
-
-.project-meta {
-    margin-bottom: 2px;
-
-    color: #000000;
-
-    font-size: 8px;
-    line-height: 1.35;
-}
-
-.project-meta strong {
-    color: #000000;
-    font-weight: 700;
-}
-
-.project-meta a {
-    color: #0000EE;
-    text-decoration: underline;
-}
-
-.project ul {
-    margin: 2px 0 0 14px;
-    padding: 0;
-}
-
-.project li {
-    margin-bottom: 1px;
-
-    color: #000000;
-
-    font-size: 8.15px;
-    line-height: 1.31;
-}
-
-
-/* =========================================
-   EDUCATION
-========================================= */
-
-.education {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 30px;
-
-    color: #000000;
-}
-
-.education-item {
-    padding: 0;
-}
-
-.education-degree {
-    margin-bottom: 3px;
-
-    color: #000000;
-
-    font-size: 9px;
-    font-weight: 800;
-}
-
-.education-details {
-    color: #000000;
-
-    font-size: 8.2px;
-    line-height: 1.4;
-}
-
-
-/* =========================================
-   PRINT
-========================================= */
-
-@media print {
-
-    body {
-        margin: 0;
-        padding: 0;
-        background: #ffffff;
-        color: #000000;
-    }
-
-    .resume {
-        width: 210mm;
-        min-height: 297mm;
-        margin: 0;
-        padding: 10mm 13mm;
-    }
-
-    .contact a,
-    .project-meta a {
-        color: #0000EE !important;
-    }
-
-}
-
-</style>
 </head>
 
 
@@ -285,427 +260,379 @@ body {
 <div class="resume">
 
 
-<!-- =========================================
-     HEADER
-========================================= -->
+    <!-- ==============================
+         HEADER
+    ============================== -->
 
-<header class="header">
+    <header>
 
-    <h1 class="name">
-        SANJAY S
-    </h1>
-
-    <div class="role">
-        Python Developer | Full Stack Developer
-    </div>
-
-    <div class="contact">
-
-        <a href="tel:+917339476299">
-            +91 7339476299
-        </a>
-
-        &nbsp; | &nbsp;
-
-        <a href="mailto:sanjaysugumar2005@gmail.com">
-            sanjaysugumar2005@gmail.com
-        </a>
-
-        &nbsp; | &nbsp;
-
-        Chennai, Tamil Nadu
-
-        <br>
-
-        <a href="https://sanjaysugumar-portfolio.netlify.app/">
-            Portfolio
-        </a>
-
-        &nbsp; | &nbsp;
-
-        <a href="https://github.com/sanjaysugumar2005">
-            GitHub
-        </a>
-
-        &nbsp; | &nbsp;
-
-        <a href="https://linkedin.com/in/sanjay-sugumar-8a90ba3b3">
-            LinkedIn
-        </a>
-
-    </div>
-
-</header>
-
-
-<!-- =========================================
-     PROFESSIONAL SUMMARY
-========================================= -->
-
-<section class="section">
-
-    <h2 class="section-title">
-        Professional Summary
-    </h2>
-
-    <p class="summary">
-        BCA graduate with hands-on experience in Python, JavaScript, HTML5,
-        CSS3, SQL, Flask, SQLite, REST APIs and Git/GitHub. Developed and
-        tested a full-stack CNG booking and token management platform,
-        INLINEASY, featuring customer booking workflows, token generation,
-        QR-based tickets, queue management and an admin dashboard.
-        Strong foundation in programming, web development, database
-        management and problem solving. Seeking an entry-level Python
-        Developer, Full Stack Developer or Software Developer opportunity.
-    </p>
-
-</section>
-
-
-<!-- =========================================
-     TECHNICAL SKILLS
-========================================= -->
-
-<section class="section">
-
-    <h2 class="section-title">
-        Technical Skills
-    </h2>
-
-    <div class="skills">
-
-        <div class="skill-name">
-            Programming Languages:
+        <div class="name">
+            Sanjay S
         </div>
 
-        <div class="skill-value">
-            Python, JavaScript, SQL, HTML5, CSS3
+        <div class="job-title">
+            Python Full Stack Developer
         </div>
 
+        <div class="contact">
 
-        <div class="skill-name">
-            Python:
+            Chennai, Tamil Nadu, India |
+            +91 7339476299 |
+            <a href="mailto:sanjaysugumar2817@gmail.com">
+                sanjaysugumar2817@gmail.com
+            </a>
+
+            <br>
+
+            GitHub:
+            <a href="https://github.com/sanjaysugumar2005"
+               target="_blank"
+               rel="noopener">
+                github.com/sanjaysugumar2005
+            </a>
+
+            |
+            LinkedIn:
+            <a href="https://linkedin.com/in/sanjay-sugumar"
+               target="_blank"
+               rel="noopener">
+                linkedin.com/in/sanjay-sugumar
+            </a>
+
+            |
+            Portfolio:
+            <a href="https://sanjaysugumar-portfolio.netlify.app"
+               target="_blank"
+               rel="noopener">
+                sanjaysugumar-portfolio.netlify.app
+            </a>
+
         </div>
 
-        <div class="skill-value">
-            Data Types, Operators, Conditional Statements, Loops,
-            Functions, Lists, Tuples, Object-Oriented Programming
-        </div>
+        <div class="header-line"></div>
+
+    </header>
 
 
-        <div class="skill-name">
-            Frontend:
-        </div>
+    <!-- ==============================
+         PROFESSIONAL SUMMARY
+    ============================== -->
 
-        <div class="skill-value">
-            HTML5, CSS3, JavaScript, Responsive Web Design,
-            Flexbox, CSS Grid, DOM Manipulation, Local Storage
-        </div>
+    <section>
 
+        <h2 class="section-title">
+            Professional Summary
+        </h2>
 
-        <div class="skill-name">
-            Backend:
-        </div>
+        <p class="summary">
+            Python Full Stack Developer and BCA graduate (2026) with
+            hands-on experience developing web applications using
+            Python, Flask, REST APIs, JavaScript, HTML5, CSS3, SQL,
+            SQLite and Git. Built a Smart CNG Booking and Token
+            Management Platform with REST APIs, duplicate-slot
+            validation, automatic token generation, QR-code tickets
+            and an administrative dashboard. Experienced in frontend
+            development, responsive design, CRUD operations and
+            database integration. Seeking an entry-level Python Full
+            Stack Developer role.
+        </p>
 
-        <div class="skill-value">
-            Flask, REST API Development, API Integration
-        </div>
-
-
-        <div class="skill-name">
-            Databases:
-        </div>
-
-        <div class="skill-value">
-            SQLite, SQL, Database Design, CRUD Operations
-        </div>
+    </section>
 
 
-        <div class="skill-name">
-            Data & Libraries:
-        </div>
+    <!-- ==============================
+         TECHNICAL SKILLS
+    ============================== -->
 
-        <div class="skill-value">
-            NumPy, Pandas, Matplotlib
-        </div>
+    <section class="skills">
 
+        <h2 class="section-title">
+            Technical Skills
+        </h2>
 
-        <div class="skill-name">
-            Tools:
-        </div>
+        <p>
+            <strong>Languages:</strong>
+            Python, JavaScript (ES6+), SQL
+        </p>
 
-        <div class="skill-value">
-            Git, GitHub, Visual Studio Code, Linux
-        </div>
+        <p>
+            <strong>Backend:</strong>
+            Python, REST APIs, API Integration, CRUD Operations
+        </p>
 
+        <p>
+            <strong>Frontend:</strong>
+            HTML5, CSS3, JavaScript, React.js, DOM Manipulation,
+            Responsive Design, CSS Grid, Flexbox
+        </p>
 
-        <div class="skill-name">
-            Development:
-        </div>
+        <!-- <p>
+            <strong>Database:</strong>
+            SQLite, SQL, Database Design, Relational Databases
+        </p> -->
 
-        <div class="skill-value">
+        <p>
+            <strong>Tools:</strong>
+            Git, GitHub, VS Code, Linux
+        </p>
+
+        <!-- <p>
+            <strong>Core:</strong>
             Debugging, Testing, Problem Solving, SDLC Fundamentals
-        </div>
+        </p> -->
+<!-- 
+        <p>
+            <strong>Learning:</strong>
+            Django, PostgreSQL, Docker, pytest
+        </p> -->
 
-    </div>
-
-</section>
-
-
-<!-- =========================================
-     PROJECTS
-========================================= -->
-
-<section class="section">
-
-    <h2 class="section-title">
-        Projects
-    </h2>
+    </section>
 
 
-    <!-- PROJECT 1 -->
+    <!-- ==============================
+         PROJECTS
+    ============================== -->
 
-    <div class="project">
+    <section>
 
-        <h3 class="project-title">
-            INLINEASY — Smart CNG Booking & Token Management Platform
-        </h3>
-
-        <div class="project-meta">
-
-            <strong>Technologies:</strong>
-
-            HTML5, CSS3, JavaScript, Python, Flask, SQLite,
-            REST APIs, Git/GitHub
-
-        </div>
-
-        <div class="project-meta">
-
-            <strong>GitHub:</strong>
-
-            <a href="https://github.com/sanjaysugumar2005/INLINEASY">
-                View Project
-            </a>
-
-        </div>
-
-        <ul>
-
-            <li>
-                Developed a full-stack CNG booking and token management
-                platform to simplify vehicle booking, token generation
-                and queue management.
-            </li>
-
-            <li>
-                Implemented a multi-step customer booking workflow
-                covering user details, vehicle selection, CNG bunk,
-                date, time slot and booking confirmation.
-            </li>
-
-            <li>
-                Developed a Flask backend with REST APIs for processing
-                booking requests and storing booking data in SQLite.
-            </li>
-
-            <li>
-                Implemented booking creation, token generation,
-                status tracking and duplicate slot validation.
-            </li>
-
-            <li>
-                Built a digital ticket and QR code workflow to provide
-                customers with booking and token information.
-            </li>
-
-            <li>
-                Developed an Admin Dashboard for monitoring bookings,
-                waiting tokens, completed tokens and no-show bookings.
-            </li>
-
-            <li>
-                Implemented JavaScript, DOM manipulation and Local Storage
-                to manage frontend booking data and application workflows.
-            </li>
-
-            <li>
-                Used Git and GitHub for source-code management and
-                project version control.
-            </li>
-
-        </ul>
-
-    </div>
+        <h2 class="section-title">
+            Projects
+        </h2>
 
 
-    <!-- PROJECT 2 -->
+        <!-- INLINEASY CNG -->
 
-    <div class="project">
+        <div class="project">
 
-        <h3 class="project-title">
-            INLINEASY — Restaurant Ordering System
-        </h3>
+            <div class="project-title">
+                Inlineasy - Smart CNG Booking & Token Management Platform
+            </div>
 
-        <div class="project-meta">
+            <div class="project-tech">
 
-            <strong>Technologies:</strong>
+                <strong>Tech:</strong>
+                Python, Flask, JavaScript, HTML5, CSS3, SQLite,
+                REST APIs, Git |
 
-            HTML5, CSS3, JavaScript, Responsive Web Design
+                <a href="https://github.com/sanjaysugumar2005/INLINEASY-Order-System"
+                   target="_blank"
+                   rel="noopener">
+                    GitHub
+                </a>
+
+            </div>
+
+            <ul>
+
+                <li>
+                    Developed a Flask-based CNG booking platform with
+                    REST APIs and SQLite database integration.
+                </li>
+
+                <li>
+                    Prevented duplicate bookings using server-side
+                    slot validation before storing reservation data.
+                </li>
+
+                <li>
+                    Streamlined reservations through a 6-step workflow
+                    covering user, vehicle, CNG bunk, date, time slot
+                    and confirmation.
+                </li>
+
+                <li>
+                    Automated token generation and queue tracking across
+                    4 states: booked, waiting, completed and no-show.
+                </li>
+
+                <li>
+                    Implemented QR-code digital tickets and an admin
+                    dashboard for booking and queue management.
+                </li>
+
+            </ul>
 
         </div>
 
-        <div class="project-meta">
 
-            <strong>GitHub:</strong>
+        <!-- RESTAURANT -->
 
-            <a href="https://github.com/sanjaysugumar2005/INLINEASY-Order-System">
-                View Project
-            </a>
+        <div class="project">
 
-        </div>
+            <div class="project-title">
+                Inlineasy - Restaurant Ordering System
+            </div>
 
-        <ul>
+            <div class="project-tech">
 
-            <li>
-                Developed a responsive restaurant ordering system
-                with a structured customer ordering workflow.
-            </li>
+                <strong>Tech:</strong>
+                HTML5, CSS3, JavaScript, DOM Manipulation,
+                Responsive Design |
 
-            <li>
-                Implemented customer login, menu browsing, food selection,
-                cart management and checkout functionality.
-            </li>
+                <a href="https://github.com/sanjaysugumar2005"
+                   target="_blank"
+                   rel="noopener">
+                    GitHub
+                </a>
 
-            <li>
-                Designed a multi-step ordering flow from authentication
-                and item selection to order confirmation and final bill.
-            </li>
+            </div>
 
-            <li>
-                Used JavaScript and DOM manipulation to create interactive
-                ordering components and manage application state.
-            </li>
+            <ul>
 
-            <li>
-                Implemented responsive layouts using HTML5 and CSS3
-                for desktop and mobile devices.
-            </li>
+                <li>
+                    Developed a complete 5-stage ordering workflow:
+                    login, menu, cart, checkout and bill generation.
+                </li>
 
-        </ul>
+                <li>
+                    Implemented dynamic cart management using JavaScript
+                    and DOM manipulation with responsive UI design.
+                </li>
 
-    </div>
-
-
-    <!-- PROJECT 3 -->
-
-    <div class="project">
-
-        <h3 class="project-title">
-            TOSSConf 2026 — Responsive Registration & Payment Website
-        </h3>
-
-        <div class="project-meta">
-
-            <strong>Technologies:</strong>
-
-            HTML5, CSS3, JavaScript
+            </ul>
 
         </div>
 
-        <div class="project-meta">
 
-            <strong>GitHub:</strong>
+        <!-- LE COCOON -->
 
-            <a href="https://github.com/sanjaysugumar2005/tossconf">
-                View Project
-            </a>
+        <div class="project">
+
+            <div class="project-title">
+                Le Cocoon - Homestay Website & Booking Platform
+            </div>
+
+            <div class="project-tech">
+
+                <strong>Tech:</strong>
+                HTML5, CSS3, JavaScript, CSS Grid, Flexbox, Git |
+
+                <a href="https://github.com/sanjaysugumar2005/le-cocoon"
+                   target="_blank"
+                   rel="noopener">
+                    GitHub
+                </a>
+
+            </div>
+
+            <ul>
+
+                <li>
+                    Developed a responsive homestay website with home,
+                    rooms, gallery, reviews, location and booking sections.
+                </li>
+
+                <li>
+                    Achieved consistent layouts across 3 screen sizes
+                    using CSS Grid, Flexbox and responsive media queries.
+                </li>
+
+            </ul>
 
         </div>
 
-        <ul>
 
-            <li>
-                Developed a responsive event registration website
-                with a clean and user-friendly interface.
-            </li>
+        <!-- TOSSCONF -->
 
-            <li>
-                Created structured registration and payment interface
-                components using HTML5 and CSS3.
-            </li>
+        <div class="project">
 
-            <li>
-                Implemented frontend interactions using JavaScript
-                for improved user experience.
-            </li>
+            <div class="project-title">
+                TOSSConf 2026 - Event Registration & Payment Website
+            </div>
 
-            <li>
-                Designed responsive layouts for different screen sizes
-                using modern CSS techniques.
-            </li>
+            <div class="project-tech">
 
-        </ul>
+                <strong>Tech:</strong>
+                HTML5, CSS3, JavaScript, Responsive Design |
 
-    </div>
+                <a href="https://github.com/sanjaysugumar2005"
+                   target="_blank"
+                   rel="noopener">
+                    GitHub
+                </a>
 
-</section>
+            </div>
 
+            <ul>
 
-<!-- =========================================
-     EDUCATION
-========================================= -->
+                <li>
+                    Developed a responsive event registration and payment
+                    interface with JavaScript-driven form interactions
+                    and client-side validation.
+                </li>
 
-<section class="section">
+            </ul>
 
-    <h2 class="section-title">
-        Education
-    </h2>
+        </div>
 
-    <div class="education">
+    </section>
 
 
-        <!-- BCA -->
+    <!-- ==============================
+         EDUCATION
+    ============================== -->
+
+    <section>
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
 
         <div class="education-item">
 
-            <div class="education-degree">
-                Bachelor of Computer Applications (BCA)
-            </div>
-
             <div class="education-details">
-                A.M. Jain College, Chennai
-                <br>
-                Graduated: May 2026
+
+                <div>
+
+                    <div class="education-title">
+                        Bachelor of Computer Applications (BCA)
+                    </div>
+
+                    <div>
+                        A.M. Jain College, Chennai
+                    </div>
+
+                </div>
+
+                <div class="education-date">
+                    May 2026
+                </div>
+
             </div>
 
         </div>
 
-
-        <!-- HSC -->
 
         <div class="education-item">
 
-            <div class="education-degree">
-                Higher Secondary Certificate (HSC)
-            </div>
-
             <div class="education-details">
-                Krishnaswamy School
-                <br>
-                Completed: March 2023
+
+                <div>
+
+                    <div class="education-title">
+                        Higher Secondary Certificate (HSC)
+                    </div>
+
+                    <div>
+                        Krishnaswamy School
+                    </div>
+
+                </div>
+
+                <div class="education-date">
+                    March 2023
+                </div>
+
             </div>
 
         </div>
 
-
-    </div>
-
-</section>
+    </section>
 
 
 </div>
 
 </body>
+
 </html>
-```
